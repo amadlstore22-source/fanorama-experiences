@@ -2,16 +2,16 @@ import Link from "next/link";
 import { Mountain, Phone, Mail, MapPin } from "lucide-react";
 
 type Dict = {
-  nav: { tours: string; accommodation: string; about: string; gallery: string; contact: string };
-  footer: { tagline: string; tours: string; company: string; legal: string; privacy: string; terms: string; rights: string };
+  nav: { rooms: string; activities: string; about: string; gallery: string; contact: string };
+  footer: { tagline: string; explore: string; company: string; legal: string; privacy: string; terms: string; rights: string };
 };
 
 export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
   const year = new Date().getFullYear();
 
-  const tourLinks = [
-    { href: `/${lang}/tours`, label: dict.nav.tours },
-    { href: `/${lang}/accommodation`, label: dict.nav.accommodation },
+  const exploreLinks = [
+    { href: `/${lang}/accommodation`, label: dict.nav.rooms },
+    { href: `/${lang}/activities`, label: dict.nav.activities },
     { href: `/${lang}/gallery`, label: dict.nav.gallery },
   ];
 
@@ -22,10 +22,7 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
 
   return (
     <footer className="bg-[#111110] text-white/70 pt-16 pb-8 relative overflow-hidden">
-      {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-terracotta/60 to-transparent" />
-
-      {/* Subtle background texture */}
       <div className="absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage: "radial-gradient(circle at 1px 1px, #fff 1px, transparent 0)",
@@ -42,8 +39,8 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
                 <Mountain className="w-5 h-5 text-white" />
               </div>
               <div className="flex flex-col leading-none">
-                <span className="font-heading text-2xl font-bold text-white">Fanorama</span>
-                <span className="text-[9px] tracking-[0.2em] uppercase text-white/30">Experiences</span>
+                <span className="font-heading text-2xl font-bold text-white">Gite Panorama</span>
+                <span className="text-[9px] tracking-[0.2em] uppercase text-white/30">Imlil · Morocco</span>
               </div>
             </Link>
             <p className="text-sm leading-relaxed text-white/40 max-w-sm mb-8">
@@ -73,16 +70,16 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
             </div>
           </div>
 
-          {/* Tours */}
+          {/* Explore */}
           <div>
             <h3 className="font-heading text-base text-white font-semibold mb-5 uppercase tracking-wider">
-              {dict.footer.tours}
+              {dict.footer.explore}
             </h3>
             <ul className="flex flex-col gap-3">
-              {tourLinks.map((l) => (
+              {exploreLinks.map((l) => (
                 <li key={l.href}>
                   <Link href={l.href}
-                    className="text-sm text-white/40 hover:text-terracotta transition-colors hover:translate-x-1 inline-block transition-transform duration-200">
+                    className="text-sm text-white/40 hover:text-terracotta transition-colors hover:translate-x-1 inline-block duration-200">
                     {l.label}
                   </Link>
                 </li>
@@ -99,7 +96,7 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
               {companyLinks.map((l) => (
                 <li key={l.href}>
                   <Link href={l.href}
-                    className="text-sm text-white/40 hover:text-terracotta transition-colors hover:translate-x-1 inline-block transition-transform duration-200">
+                    className="text-sm text-white/40 hover:text-terracotta transition-colors hover:translate-x-1 inline-block duration-200">
                     {l.label}
                   </Link>
                 </li>
@@ -117,7 +114,7 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
 
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/25">
-          <span>© {year} Fanorama Experiences. {dict.footer.rights}</span>
+          <span>© {year} Gite Panorama Imlil. {dict.footer.rights}</span>
           <div className="flex gap-6">
             <Link href={`/${lang}/privacy`} className="hover:text-white/50 transition-colors">
               {dict.footer.privacy}

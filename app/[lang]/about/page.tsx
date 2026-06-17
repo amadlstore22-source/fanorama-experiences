@@ -1,16 +1,18 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Shield, Heart, Users, Star, Mountain, Utensils, Award } from "lucide-react";
+import { Heart, Star, Utensils, Award, Home, Globe } from "lucide-react";
 import { getDictionary, hasLocale } from "../dictionaries";
 import type { Metadata } from "next";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/about">): Promise<Metadata> {
   const { lang } = await params;
   return {
-    title: lang === "fr" ? "Notre Histoire | Fanorama Experiences" : "Our Story | Fanorama Experiences",
+    title: lang === "fr"
+      ? "Notre Histoire | Gîte Panorama Imlil"
+      : "Our Story | Gite Panorama Imlil",
     description: lang === "fr"
-      ? "Famille Aitidar d'Imlil — guides de montagne passionnés depuis 2010."
-      : "The Aitidar family from Imlil — passionate mountain guides since 2010.",
+      ? "La famille Aitidar vous accueille au Gîte Panorama à Imlil depuis 2010 avec une hospitalité berbère authentique."
+      : "The Aitidar family welcomes you to Gite Panorama in Imlil since 2010 with authentic Berber hospitality.",
   };
 }
 
@@ -22,39 +24,18 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
 
   const values = [
     {
-      icon: Users,
-      en: "Small groups, big experiences",
-      fr: "Petits groupes, grandes expériences",
-      descEn: "We cap every tour at 12 people maximum — so you get personal attention, flexible pacing, and a genuine connection with your guides and the landscape.",
-      descFr: "Nous limitons chaque circuit à 12 personnes maximum — pour une attention personnalisée, un rythme flexible et une vraie connexion avec vos guides et les paysages.",
-    },
-    {
       icon: Heart,
-      en: "Born and raised in Imlil",
-      fr: "Nés et élevés à Imlil",
-      descEn: "We are the Aitidar family — we grew up on these trails. We know every pass, every village, every hidden waterfall. This isn't a job for us, it's our home.",
-      descFr: "Nous sommes la famille Aitidar — nous avons grandi sur ces pistes. Nous connaissons chaque col, chaque village, chaque cascade cachée. Ce n'est pas un métier pour nous, c'est notre maison.",
+      en: "Warm Berber hospitality",
+      fr: "Hospitalité berbère chaleureuse",
+      descEn: "The Aitidar family treats every guest like family. From the moment you arrive, you'll feel the warmth of genuine Berber hospitality that has earned glowing reviews from guests worldwide.",
+      descFr: "La famille Aitidar traite chaque client comme un membre de la famille. Dès votre arrivée, vous ressentirez la chaleur d'une hospitalité berbère authentique qui a valu des avis élogieux de clients du monde entier.",
     },
     {
-      icon: Shield,
-      en: "Safety on every trail",
-      fr: "Sécurité sur chaque piste",
-      descEn: "All our guides are certified mountain professionals with first aid training. Every tour has a 4x4 support vehicle, mechanical assistance, and carefully planned routes.",
-      descFr: "Tous nos guides sont des professionnels de montagne certifiés avec formation aux premiers secours. Chaque circuit dispose d'un véhicule 4x4, d'assistance mécanique et d'itinéraires soigneusement planifiés.",
-    },
-    {
-      icon: Star,
-      en: "Authentic cultural immersion",
-      fr: "Immersion culturelle authentique",
-      descEn: "Mint tea with Berber families, home-cooked tagines, overnight stays in mountain gites — we connect you with the real Morocco, not the tourist version.",
-      descFr: "Thé à la menthe chez des familles berbères, tagines faits maison, nuits dans des gîtes de montagne — nous vous connectons au vrai Maroc, pas à sa version touristique.",
-    },
-    {
-      icon: Mountain,
-      en: "Every level welcome",
-      fr: "Tous niveaux bienvenus",
-      descEn: "From beginners on e-bikes to advanced enduro riders, from families trekking to solo skiers — we design experiences for everyone who loves the outdoors.",
-      descFr: "Des débutants en e-bike aux riders enduro confirmés, des familles en randonnée aux skieurs solos — nous concevons des expériences pour tous les amoureux du plein air.",
+      icon: Home,
+      en: "A true home in the mountains",
+      fr: "Un vrai foyer en montagne",
+      descEn: "Gite Panorama is our family home. We've designed every room to be comfortable and welcoming, with views of the Atlas Mountains that guests consistently describe as breathtaking.",
+      descFr: "Le Gîte Panorama est notre maison familiale. Nous avons conçu chaque chambre pour être confortable et accueillante, avec des vues sur l'Atlas que les clients décrivent toujours comme époustouflantes.",
     },
     {
       icon: Utensils,
@@ -63,31 +44,52 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
       descEn: "Breakfast, lunch, and dinner prepared with local ingredients. Our guests consistently say they had the best tagine of their life at Gite Panorama.",
       descFr: "Petit-déjeuner, déjeuner et dîner préparés avec des ingrédients locaux. Nos clients disent régulièrement avoir mangé le meilleur tagine de leur vie au Gîte Panorama.",
     },
+    {
+      icon: Star,
+      en: "Rated among the best in Imlil",
+      fr: "Parmi les meilleurs d'Imlil",
+      descEn: "4.9★ on Google with 31 reviews. 9.1 Superb on Booking.com with 95 reviews. These scores reflect our commitment to making every stay exceptional.",
+      descFr: "4.9★ sur Google avec 31 avis. 9.1 Superbe sur Booking.com avec 95 avis. Ces scores reflètent notre engagement à rendre chaque séjour exceptionnel.",
+    },
+    {
+      icon: Globe,
+      en: "Guests from 30+ countries",
+      fr: "Clients de plus de 30 pays",
+      descEn: "We've welcomed travelers from over 30 countries who come to experience the magic of Imlil, the gateway to Toubkal National Park.",
+      descFr: "Nous avons accueilli des voyageurs de plus de 30 pays qui viennent découvrir la magie d'Imlil, la porte d'entrée du Parc National du Toubkal.",
+    },
+    {
+      icon: Award,
+      en: "Born and raised in Imlil",
+      fr: "Nés et élevés à Imlil",
+      descEn: "We are the Aitidar family — we grew up in this village. We know every corner, every trail, every neighbor. This is our home and we're proud to share it with the world.",
+      descFr: "Nous sommes la famille Aitidar — nous avons grandi dans ce village. Nous connaissons chaque recoin, chaque sentier, chaque voisin. C'est notre maison et nous sommes fiers de la partager avec le monde.",
+    },
   ];
 
-  const guides = [
+  const hosts = [
     {
       name: "Ismael Aitidar",
-      roleEn: "Head Guide & Founder",
-      roleFr: "Guide Principal & Fondateur",
-      bioEn: "Expert mountain guide, cyclist, and the heart of Fanorama Experiences. Ismael has been leading tours in the Atlas for over 15 years and knows every trail intimately.",
-      bioFr: "Guide de montagne expert, cycliste et âme de Fanorama Experiences. Ismael guide des circuits dans l'Atlas depuis plus de 15 ans et connaît chaque piste intimement.",
+      roleEn: "Host & Founder",
+      roleFr: "Hôte & Fondateur",
+      bioEn: "The heart and soul of Gite Panorama. Ismael has been welcoming guests for over 15 years and knows how to make everyone feel at home in Imlil.",
+      bioFr: "Le cœur et l'âme du Gîte Panorama. Ismael accueille des clients depuis plus de 15 ans et sait comment mettre tout le monde à l'aise à Imlil.",
       initial: "I",
     },
     {
       name: "Youssuf Aitidar",
-      roleEn: "Mountain Guide & Host",
-      roleFr: "Guide de Montagne & Hôte",
-      bioEn: "A kind, polite, and incredibly welcoming guide who manages Gite Panorama and leads trekking and biking tours. Guests love his warmth and local knowledge.",
-      bioFr: "Un guide attentionné, poli et incroyablement accueillant qui gère le Gîte Panorama et mène des circuits de randonnée et de vélo.",
+      roleEn: "Host & Manager",
+      roleFr: "Hôte & Responsable",
+      bioEn: "Kind, attentive, and incredibly welcoming. Youssuf manages the day-to-day running of the gite and ensures every guest has everything they need.",
+      bioFr: "Attentionné, généreux et incroyablement accueillant. Youssuf gère le quotidien du gîte et s'assure que chaque client a tout ce dont il a besoin.",
       initial: "Y",
     },
     {
       name: "Lason Aitidar",
-      roleEn: "Senior Guide & Trek Specialist",
-      roleFr: "Guide Senior & Spécialiste Trek",
-      bioEn: "A really nice guy and experienced elder guide who helps guests choose the best trek for their level. Lason's route knowledge across the High Atlas is unmatched.",
-      bioFr: "Un guide senior vraiment sympathique qui aide les clients à choisir le meilleur trek selon leur niveau. La connaissance des itinéraires de Lason dans le Haut Atlas est inégalée.",
+      roleEn: "Host & Local Guide",
+      roleFr: "Hôte & Guide Local",
+      bioEn: "A warm and experienced host who helps guests explore the area around Imlil. Lason's deep knowledge of the local area is unmatched.",
+      bioFr: "Un hôte chaleureux et expérimenté qui aide les clients à explorer la région d'Imlil. La connaissance approfondie de Lason de la région locale est inégalée.",
       initial: "L",
     },
   ];
@@ -102,11 +104,10 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
   return (
     <div className="min-h-screen bg-[#111110] pb-20">
       {/* Hero */}
-      <div className="relative h-[70vh] min-h-[560px] overflow-hidden">
-        <Image src="/images/about-team.jpg" alt="Fanorama team in Imlil" fill className="object-cover" sizes="100vw" />
+      <div className="relative h-[65vh] min-h-[500px] overflow-hidden">
+        <Image src="/images/about-team.jpg" alt="The Aitidar family at Gite Panorama Imlil" fill className="object-cover" sizes="100vw" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#111110] via-black/50 to-black/40" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
-
         <div className="absolute bottom-0 left-0 right-0 px-6 md:px-10 pb-14">
           <div className="inline-flex items-center gap-2 bg-terracotta/20 text-terracotta text-xs font-semibold px-4 py-2 rounded-full mb-5 border border-terracotta/30">
             <Award className="w-3.5 h-3.5" />
@@ -142,59 +143,59 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
               </span>
             </div>
             <h2 className="font-heading text-4xl font-bold text-white mb-6">
-              {isFr ? "Nés dans l'Atlas" : "Born in the Atlas"}
+              {isFr ? "Nés à Imlil" : "Born in Imlil"}
             </h2>
             <div className="space-y-4 text-white/55 leading-relaxed">
               {isFr ? (
                 <>
-                  <p>Tout a commencé dans le village d'Imlil, au pied du mont Toubkal — le plus haut sommet d'Afrique du Nord à 4 167m. La famille Aitidar vit et travaille ici depuis des générations, et c'est de cette passion profonde pour la montagne qu'est née Fanorama Experiences.</p>
-                  <p>Depuis 2010, nous guidons des aventuriers du monde entier à travers nos montagnes. Chaque circuit est conçu pour être authentique, sécurisé et inoubliable.</p>
-                  <p>Le Gîte Panorama, notre hébergement familial à Imlil, accueille les voyageurs avec des repas marocains faits maison et une chaleur berbère authentique.</p>
+                  <p>Tout a commencé dans le village d'Imlil, au pied du mont Toubkal — le plus haut sommet d'Afrique du Nord à 4 167m. La famille Aitidar vit et travaille ici depuis des générations.</p>
+                  <p>En 2010, nous avons ouvert les portes du Gîte Panorama pour partager notre coin de paradis avec les voyageurs du monde entier. Ce n'est pas un hôtel — c'est notre maison, et vous êtes nos invités.</p>
+                  <p>Chaque repas est préparé avec des ingrédients locaux. Chaque chambre a été aménagée avec soin. Et chaque client repart avec le sourire — et souvent avec la recette du tagine.</p>
                 </>
               ) : (
                 <>
-                  <p>It all started in the village of Imlil, at the foot of Mount Toubkal — North Africa's highest peak at 4,167m. The Aitidar family has lived and worked here for generations, and it is from this deep love of the mountains that Fanorama Experiences was born.</p>
-                  <p>Since 2010, we've been guiding adventurers from around the world through our beloved mountains. Every experience is designed to be authentic, safe, and unforgettable.</p>
-                  <p>Gite Panorama, our family-run guesthouse in Imlil, welcomes travelers with home-cooked Moroccan meals and a genuine Berber warmth that has earned glowing reviews from guests across 30+ countries.</p>
+                  <p>It all started in the village of Imlil, at the foot of Mount Toubkal — North Africa's highest peak at 4,167m. The Aitidar family has lived and worked here for generations.</p>
+                  <p>In 2010, we opened the doors of Gite Panorama to share our corner of paradise with travelers from around the world. This isn't a hotel — it's our home, and you are our guests.</p>
+                  <p>Every meal is prepared with local ingredients. Every room has been set up with care. And every guest leaves with a smile — and often with the tagine recipe.</p>
                 </>
               )}
             </div>
           </div>
           <div className="relative h-80 md:h-[420px] rounded-3xl overflow-hidden border border-white/10">
-            <Image src="/images/about-team.jpg" alt="The Aitidar family in Imlil" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+            <Image src="/images/about-team.jpg" alt={isFr ? "La famille Aitidar à Imlil" : "The Aitidar family in Imlil"} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
         </div>
 
-        {/* Meet the guides */}
+        {/* Meet the hosts */}
         <div>
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
               <div className="h-px w-10 bg-saffron/60" />
               <span className="text-saffron text-xs font-semibold tracking-[0.3em] uppercase">
-                {isFr ? "L'équipe" : "The team"}
+                {isFr ? "Vos hôtes" : "Your hosts"}
               </span>
               <div className="h-px w-10 bg-saffron/60" />
             </div>
             <h2 className="font-heading text-4xl font-bold text-white mb-3">
-              {isFr ? "Vos Guides" : "Your Guides"}
+              {isFr ? "La Famille Aitidar" : "The Aitidar Family"}
             </h2>
             <p className="text-white/40 text-sm">
-              {isFr ? "Des montagnards passionnés qui connaissent chaque piste" : "Passionate mountaineers who know every trail"}
+              {isFr ? "Des hôtes passionnés qui connaissent chaque coin d'Imlil" : "Passionate hosts who know every corner of Imlil"}
             </p>
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
-            {guides.map((g) => (
-              <div key={g.name} className="bg-white/5 border border-white/10 rounded-2xl p-7 text-center hover:border-terracotta/30 hover:-translate-y-1 transition-all duration-300 group">
+            {hosts.map((h) => (
+              <div key={h.name} className="bg-white/5 border border-white/10 rounded-2xl p-7 text-center hover:border-terracotta/30 hover:-translate-y-1 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-terracotta to-saffron rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <span className="font-heading text-2xl font-bold text-white">{g.initial}</span>
+                  <span className="font-heading text-2xl font-bold text-white">{h.initial}</span>
                 </div>
-                <h3 className="font-heading text-xl font-bold text-white mb-0.5">{g.name}</h3>
+                <h3 className="font-heading text-xl font-bold text-white mb-0.5">{h.name}</h3>
                 <p className="text-terracotta text-xs font-semibold mb-4 uppercase tracking-wider">
-                  {isFr ? g.roleFr : g.roleEn}
+                  {isFr ? h.roleFr : h.roleEn}
                 </p>
                 <p className="text-sm text-white/50 leading-relaxed">
-                  {isFr ? g.bioFr : g.bioEn}
+                  {isFr ? h.bioFr : h.bioEn}
                 </p>
               </div>
             ))}
@@ -212,7 +213,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
               <div className="h-px w-10 bg-saffron/60" />
             </div>
             <h2 className="font-heading text-4xl font-bold text-white mb-3">
-              {isFr ? "Nos Valeurs" : "Our Values"}
+              {isFr ? "Pourquoi Choisir le Gîte Panorama" : "Why Choose Gite Panorama"}
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -233,7 +234,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           </div>
         </div>
 
-        {/* Booking.com scores */}
+        {/* Booking.com score card */}
         <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
           <div className="flex flex-col md:flex-row md:items-center gap-8">
             <div className="text-center shrink-0 bg-atlas-green/10 border border-atlas-green/20 rounded-2xl p-6">

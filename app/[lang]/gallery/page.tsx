@@ -6,27 +6,33 @@ import type { Metadata } from "next";
 export async function generateMetadata({ params }: PageProps<"/[lang]/gallery">): Promise<Metadata> {
   const { lang } = await params;
   return {
-    title: lang === "fr" ? "Galerie | Fanorama Experiences" : "Gallery | Fanorama Experiences",
+    title: lang === "fr"
+      ? "Notre Gîte en Photos | Gîte Panorama Imlil"
+      : "Our Gite in Photos | Gite Panorama Imlil",
+    description: lang === "fr"
+      ? "Photos du Gîte Panorama à Imlil — chambres, terrasse, vues sur l'Atlas et repas marocains."
+      : "Photos of Gite Panorama in Imlil — rooms, terrace, Atlas views and Moroccan meals.",
   };
 }
 
 const photos = [
-  { src: "/images/tours/atlas-mtb-2day-1.jpg", alt: "Atlas Mountains MTB", category: "MTB" },
-  { src: "/images/tours/ebike-berber-1.jpg", alt: "E-Bike Berber Valley", category: "E-Bike" },
-  { src: "/images/tours/kik-plateau-1.jpg", alt: "Kik Plateau", category: "E-Bike" },
-  { src: "/images/tours/atlas-atlantic-1.jpg", alt: "Atlas to Atlantic", category: "MTB" },
-  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Gite Panorama", category: "Stay" },
-  { src: "/images/tours/enduro-8day-1.jpg", alt: "Enduro MTB", category: "MTB" },
-  { src: "/images/tours/anti-atlas-1.jpg", alt: "Anti-Atlas", category: "MTB" },
-  { src: "/images/tours/atlas-mtb-3day-1.jpg", alt: "Atlas 3-Day MTB", category: "MTB" },
-  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Mountain Views from Gite", category: "Stay" },
+  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Gite Panorama exterior with Atlas views", altFr: "Extérieur du Gîte Panorama avec vue sur l'Atlas", category: "Exterior" },
+  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Panoramic terrace overlooking Imlil valley", altFr: "Terrasse panoramique sur la vallée d'Imlil", category: "Terrace" },
+  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Deluxe room with balcony and mountain view", altFr: "Chambre deluxe avec balcon et vue montagne", category: "Rooms" },
+  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Traditional Moroccan tagine breakfast", altFr: "Petit-déjeuner tajine marocain traditionnel", category: "Food" },
+  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Mount Toubkal view from Gite Panorama", altFr: "Vue sur le Mont Toubkal depuis le Gîte Panorama", category: "Views" },
+  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Cozy double room with Atlas mountain view", altFr: "Chambre double confortable avec vue sur l'Atlas", category: "Rooms" },
+  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Gite Panorama garden and mountain backdrop", altFr: "Jardin du Gîte Panorama avec montagne en fond", category: "Exterior" },
+  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Moroccan mint tea served on the terrace", altFr: "Thé à la menthe marocain servi en terrasse", category: "Food" },
+  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Sunset over the Atlas Mountains from the gite", altFr: "Coucher de soleil sur l'Atlas depuis le gîte", category: "Views" },
 ];
 
 const categoryColors: Record<string, string> = {
-  MTB: "bg-terracotta",
-  "E-Bike": "bg-atlas-green",
-  Stay: "bg-saffron/80",
-  Trek: "bg-blue-500",
+  Exterior: "bg-terracotta",
+  Terrace: "bg-atlas-green",
+  Rooms: "bg-saffron/80",
+  Food: "bg-orange-600",
+  Views: "bg-blue-600",
 };
 
 export default async function GalleryPage({ params }: PageProps<"/[lang]/gallery">) {
@@ -50,7 +56,7 @@ export default async function GalleryPage({ params }: PageProps<"/[lang]/gallery
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="h-px w-10 bg-saffron/60" />
             <span className="text-saffron text-xs font-semibold tracking-[0.3em] uppercase">
-              {isFr ? "Nos aventures en images" : "Our adventures in pictures"}
+              {isFr ? "Gîte Panorama · Imlil" : "Gite Panorama · Imlil"}
             </span>
             <div className="h-px w-10 bg-saffron/60" />
           </div>
@@ -69,27 +75,25 @@ export default async function GalleryPage({ params }: PageProps<"/[lang]/gallery
             >
               <Image
                 src={photo.src}
-                alt={photo.alt}
+                alt={isFr ? photo.altFr : photo.alt}
                 width={600}
                 height={400}
                 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
-              {/* Hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                 <div className="flex items-center gap-2">
                   <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full text-white ${categoryColors[photo.category] ?? "bg-charcoal"} tracking-widest`}>
                     {photo.category}
                   </span>
-                  <span className="text-white/70 text-xs">{photo.alt}</span>
+                  <span className="text-white/70 text-xs">{isFr ? photo.altFr : photo.alt}</span>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Placeholder message for empty photos */}
         <div className="mt-12 text-center">
           <p className="text-white/20 text-sm">
             {isFr

@@ -1,101 +1,73 @@
 {
   "nav": {
-    "tours": "Tours",
-    "accommodation": "Accommodation",
+    "rooms": "Rooms",
+    "activities": "Activities",
     "about": "About",
     "gallery": "Gallery",
     "contact": "Contact",
     "bookNow": "Book Now"
   },
   "hero": {
-    "tagline": "Explore Morocco's Wildest Terrain",
-    "subtitle": "Expert-guided bike tours, ski adventures, trekking, and authentic stays in the Atlas Mountains",
-    "ctaTours": "Explore Tours",
-    "ctaStay": "Book a Stay"
-  },
-  "categories": {
-    "mtb": "Mountain Biking",
-    "ebike": "E-Bike Tours",
-    "ski": "Ski Tours",
-    "trekking": "Trekking",
-    "stay": "Gite Panorama"
+    "tagline": "Gite Panorama — Imlil, Morocco",
+    "subtitle": "A family-run guesthouse at the foot of Toubkal with breathtaking Atlas views, home-cooked Moroccan meals, and warm Berber hospitality.",
+    "ctaRooms": "View Rooms",
+    "ctaContact": "Get in Touch"
   },
   "stats": {
-    "years": "15+ Years",
-    "yearsLabel": "Experience",
+    "years": "2010",
+    "yearsLabel": "Est. in Imlil",
     "guests": "500+",
     "guestsLabel": "Happy Guests",
     "rating": "4.9★",
-    "ratingLabel": "Rated",
+    "ratingLabel": "Google Rating",
     "countries": "30+",
     "countriesLabel": "Countries"
   },
-  "featured": {
-    "title": "Our Most Loved Adventures",
-    "subtitle": "Hand-picked experiences in the heart of Morocco's Atlas Mountains",
-    "viewAll": "View All Tours"
-  },
-  "giteTeaser": {
-    "title": "Stay at the Foot of Toubkal",
-    "subtitle": "Gite Panorama — your mountain home in Imlil, with breathtaking Atlas views, warm hospitality, and all the comforts you need after a day of adventure.",
-    "cta": "Discover the Gite",
-    "badge": "4.9★ · 31 Google Reviews"
-  },
-  "testimonials": {
-    "title": "What Our Guests Say"
-  },
-  "tour": {
-    "duration": "Duration",
-    "difficulty": "Difficulty",
-    "groupSize": "Group Size",
-    "meetingPoint": "Meeting Point",
-    "included": "What's Included",
-    "notIncluded": "Not Included",
-    "itinerary": "Itinerary",
-    "overview": "Overview",
-    "practical": "Practical Info",
-    "bookThis": "Book This Tour",
+  "rooms": {
+    "title": "Choose Your Room",
+    "subtitle": "Every room has been designed for comfort after a day in the mountains.",
+    "viewAll": "View All Rooms",
     "from": "From",
+    "perNight": "/ night",
+    "bookThis": "Book This Room",
+    "details": "View Details"
+  },
+  "activities": {
+    "title": "Day Activities",
+    "subtitle": "Make the most of your stay with a local experience led by the Aitidar family.",
+    "duration": "Duration",
+    "price": "Price",
     "perPerson": "per person",
-    "days": "days",
-    "day": "Day",
-    "persons": "persons",
-    "difficulty_beginner": "Beginner",
-    "difficulty_intermediate": "Intermediate",
-    "difficulty_advanced": "Advanced",
-    "category_mtb": "MTB",
-    "category_ebike": "E-Bike",
-    "category_ski": "Ski",
-    "category_trekking": "Trekking"
+    "bookThis": "Book This Activity",
+    "comingSoon": "More activities coming soon"
   },
   "booking": {
-    "title": "Reserve Your Spot",
+    "title": "Reserve Your Stay",
     "name": "Full Name",
     "email": "Email Address",
     "phone": "Phone / WhatsApp",
-    "date": "Preferred Date(s)",
-    "groupSize": "Group Size",
-    "message": "Message (optional)",
+    "date": "Check-in Date",
+    "checkOut": "Check-out Date",
+    "groupSize": "Number of Guests",
+    "message": "Special Requests (optional)",
     "submit": "Send Booking Request",
     "sending": "Sending...",
     "successTitle": "Request Sent!",
     "successMessage": "Thank you! We'll confirm your booking within 24 hours. Check your inbox for our reply.",
-    "whatsappAlt": "Prefer to chat? Message us on WhatsApp",
+    "whatsappAlt": "Prefer WhatsApp? Message us directly",
     "namePlaceholder": "Your full name",
     "emailPlaceholder": "your@email.com",
     "phonePlaceholder": "+1 234 567 8900",
-    "datePlaceholder": "e.g. July 15-16, 2026",
-    "messagePlaceholder": "Any questions or special requests?",
-    "tourLabel": "Tour"
+    "datePlaceholder": "e.g. 15 July 2026",
+    "checkOutPlaceholder": "e.g. 18 July 2026",
+    "messagePlaceholder": "Dietary needs, arrival time, room preferences...",
+    "tourLabel": "Booking for"
   },
   "accommodation": {
     "title": "Gite Panorama",
     "subtitle": "Your mountain refuge in the heart of Imlil",
-    "description": "Nestled in the village of Imlil at the foot of Toubkal National Park, Gite Panorama offers a warm, authentic mountain stay with breathtaking Atlas views, home-cooked Moroccan meals, and the perfect base for your adventures.",
-    "from": "From",
-    "perNight": "/ night",
-    "contactAvailability": "Contact us for availability",
-    "amenities": "Amenities",
+    "description": "Nestled in the village of Imlil at the foot of Toubkal National Park, Gite Panorama offers a warm, authentic mountain stay with breathtaking Atlas views, home-cooked Moroccan meals, and the perfect base for exploring the High Atlas.",
+    "amenities": "Amenities & Facilities",
     "location": "Location",
     "bookStay": "Book Your Stay",
     "checkIn": "Check-in Date",
@@ -105,11 +77,11 @@
   },
   "about": {
     "title": "Our Story",
-    "subtitle": "Born in the Atlas Mountains, built on passion"
+    "subtitle": "The Aitidar family — hosts in Imlil since 2010"
   },
   "contact": {
     "title": "Get In Touch",
-    "subtitle": "We'd love to hear from you",
+    "subtitle": "We'd love to welcome you to Gite Panorama",
     "phone": "Phone",
     "whatsapp": "WhatsApp",
     "email": "Email",
@@ -117,9 +89,9 @@
     "sendMessage": "Send Message"
   },
   "footer": {
-    "tagline": "Expert-guided adventures in Morocco's Atlas Mountains since 2010.",
-    "tours": "Tours",
-    "company": "Company",
+    "tagline": "A family-run guesthouse in Imlil at the foot of the Atlas Mountains.",
+    "explore": "Explore",
+    "company": "About",
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms & Conditions",
@@ -128,21 +100,12 @@
   "whatsapp": {
     "tooltip": "Chat with us on WhatsApp"
   },
-  "filter": {
-    "all": "All Tours",
-    "type": "Activity",
-    "duration": "Duration",
-    "difficulty": "Difficulty",
-    "dayTour": "Day Tour",
-    "multiDay": "2-3 Days",
-    "weekPlus": "7+ Days",
-    "allTypes": "All Activities",
-    "allDurations": "Any Duration",
-    "allDifficulties": "Any Level"
-  },
   "gallery": {
-    "title": "Gallery",
-    "subtitle": "Moments from the mountains"
+    "title": "Our Gite",
+    "subtitle": "Views, rooms, and moments from Gite Panorama"
+  },
+  "testimonials": {
+    "title": "What Our Guests Say"
   },
   "notFound": {
     "title": "Page Not Found",

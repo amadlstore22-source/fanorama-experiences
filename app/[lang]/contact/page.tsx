@@ -7,7 +7,12 @@ import type { Metadata } from "next";
 export async function generateMetadata({ params }: PageProps<"/[lang]/contact">): Promise<Metadata> {
   const { lang } = await params;
   return {
-    title: lang === "fr" ? "Contact | Fanorama Experiences" : "Contact | Fanorama Experiences",
+    title: lang === "fr"
+      ? "Contact & Réservation | Gîte Panorama Imlil"
+      : "Contact & Booking | Gite Panorama Imlil",
+    description: lang === "fr"
+      ? "Contactez le Gîte Panorama à Imlil pour réserver votre chambre. Téléphone, WhatsApp, email — réponse garantie sous 24h."
+      : "Contact Gite Panorama in Imlil to book your room. Phone, WhatsApp, email — response guaranteed within 24 hours.",
   };
 }
 
@@ -40,7 +45,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
           <div className="flex items-center gap-3 mb-4">
             <div className="h-px w-10 bg-saffron/60" />
             <span className="text-saffron text-xs font-semibold tracking-[0.3em] uppercase">
-              {isFr ? "Parlons aventure" : "Let's talk adventure"}
+              {isFr ? "Gîte Panorama · Imlil" : "Gite Panorama · Imlil"}
             </span>
           </div>
           <h1 className="font-heading text-5xl md:text-7xl font-bold text-white mb-4 leading-tight">{c.title}</h1>
@@ -76,7 +81,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/212653936003?text=Hello! I'd like to book a tour with Fanorama Experiences."
+              href={`https://wa.me/212653936003?text=${encodeURIComponent(isFr ? "Bonjour ! Je souhaite réserver une chambre au Gîte Panorama." : "Hello! I'd like to book a room at Gite Panorama.")}`}
               target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-4 bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] rounded-2xl p-5 hover:bg-[#25D366]/20 hover:border-[#25D366]/50 transition-all duration-200 group"
             >
@@ -84,7 +89,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
                 <MessageCircle className="w-6 h-6 fill-[#25D366]" />
               </div>
               <div>
-                <div className="font-semibold text-base">{isFr ? "Chattez avec nous sur WhatsApp" : "Chat with us on WhatsApp"}</div>
+                <div className="font-semibold text-base">{isFr ? "Réservez sur WhatsApp" : "Book via WhatsApp"}</div>
                 <div className="text-[#25D366]/60 text-sm">{isFr ? "Réponse rapide garantie" : "Fast response guaranteed"}</div>
               </div>
             </a>
@@ -102,10 +107,10 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
             </div>
           </div>
 
-          {/* Form */}
+          {/* Booking form */}
           <div>
             <BookingForm
-              tourName={isFr ? "Demande générale" : "General inquiry"}
+              tourName={isFr ? "Gîte Panorama — Séjour" : "Gite Panorama — Room Booking"}
               lang={lang}
               dict={dict}
             />

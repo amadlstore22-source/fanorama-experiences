@@ -9,7 +9,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import LanguageSwitcher from "@/components/shared/LanguageSwitcher";
 
-type Dict = { nav: { tours: string; accommodation: string; about: string; gallery: string; contact: string; bookNow: string } };
+type Dict = { nav: { rooms: string; activities: string; about: string; gallery: string; contact: string; bookNow: string } };
 
 export default function Navbar({ lang, dict }: { lang: string; dict: Dict }) {
   const [scrolled, setScrolled] = useState(false);
@@ -23,8 +23,8 @@ export default function Navbar({ lang, dict }: { lang: string; dict: Dict }) {
   }, []);
 
   const links = [
-    { href: `/${lang}/tours`, label: dict.nav.tours },
-    { href: `/${lang}/accommodation`, label: dict.nav.accommodation },
+    { href: `/${lang}/accommodation`, label: dict.nav.rooms },
+    { href: `/${lang}/activities`, label: dict.nav.activities },
     { href: `/${lang}/about`, label: dict.nav.about },
     { href: `/${lang}/gallery`, label: dict.nav.gallery },
     { href: `/${lang}/contact`, label: dict.nav.contact },
@@ -50,10 +50,10 @@ export default function Navbar({ lang, dict }: { lang: string; dict: Dict }) {
             </div>
             <div className="flex flex-col leading-none">
               <span className={`font-heading text-xl font-bold tracking-wide ${dark ? "text-white" : "text-charcoal"}`}>
-                Fanorama
+                Gite Panorama
               </span>
               <span className={`text-[9px] tracking-[0.2em] uppercase font-medium ${dark ? "text-white/50" : "text-muted-warm"}`}>
-                Experiences
+                Imlil · Morocco
               </span>
             </div>
           </Link>
@@ -112,8 +112,8 @@ export default function Navbar({ lang, dict }: { lang: string; dict: Dict }) {
                       <Mountain className="w-5 h-5 text-white" />
                     </div>
                     <div className="flex flex-col leading-none">
-                      <span className="font-heading text-xl font-bold text-white">Fanorama</span>
-                      <span className="text-[9px] tracking-[0.2em] uppercase text-white/40">Experiences</span>
+                      <span className="font-heading text-xl font-bold text-white">Gite Panorama</span>
+                      <span className="text-[9px] tracking-[0.2em] uppercase text-white/40">Imlil · Morocco</span>
                     </div>
                   </div>
                 </div>

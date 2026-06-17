@@ -1,11 +1,11 @@
 export function LocalBusinessJsonLd() {
   const data = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "TouristInformationCenter"],
-    name: "Fanorama Experiences",
-    alternateName: "Gite Panorama Imlil",
+    "@type": ["LodgingBusiness", "BedAndBreakfast"],
+    name: "Gite Panorama Imlil",
+    alternateName: "Gîte Panorama",
     description:
-      "Expert-guided MTB, e-bike, ski, and trekking adventures in Morocco's Atlas Mountains, with authentic accommodation at Gite Panorama in Imlil.",
+      "A family-run guesthouse in Imlil at the foot of Toubkal National Park. Panoramic Atlas views, home-cooked Moroccan meals, and authentic Berber hospitality.",
     url: "https://fanorama-experiences.vercel.app",
     telephone: "+212653936003",
     email: "1wahed.nab2012@gmail.com",
@@ -25,7 +25,7 @@ export function LocalBusinessJsonLd() {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       opens: "07:00",
-      closes: "21:00",
+      closes: "22:00",
     },
     aggregateRating: {
       "@type": "AggregateRating",
@@ -36,29 +36,19 @@ export function LocalBusinessJsonLd() {
     priceRange: "$$",
     currenciesAccepted: "MAD, EUR, USD",
     paymentAccepted: "Cash, Bank Transfer",
+    checkinTime: "12:00",
+    checkoutTime: "11:00",
+    amenityFeature: [
+      { "@type": "LocationFeatureSpecification", name: "Free WiFi", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Breakfast included", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Panoramic mountain views", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Hammam / Steam room", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Airport shuttle", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Sun terrace", value: true },
+    ],
     hasMap: "https://www.google.com/maps?q=31.1324771,-7.9203727",
     sameAs: [
       "https://www.booking.com/hotel/ma/gite-panorama-imlil.html",
-    ],
-    offers: [
-      {
-        "@type": "Offer",
-        name: "MTB Tours Atlas Mountains",
-        description: "Expert-guided mountain bike tours in the Moroccan Atlas",
-        url: "https://fanorama-experiences.vercel.app/en/tours",
-      },
-      {
-        "@type": "Offer",
-        name: "E-Bike Adventures",
-        description: "Electric bike tours through Berber valleys",
-        url: "https://fanorama-experiences.vercel.app/en/tours",
-      },
-      {
-        "@type": "Offer",
-        name: "Gite Panorama Accommodation",
-        description: "Authentic mountain accommodation in Imlil with panoramic Atlas views",
-        url: "https://fanorama-experiences.vercel.app/en/accommodation",
-      },
     ],
   };
 

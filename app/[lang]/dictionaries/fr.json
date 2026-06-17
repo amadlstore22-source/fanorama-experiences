@@ -1,101 +1,73 @@
 {
   "nav": {
-    "tours": "Excursions",
-    "accommodation": "Hébergement",
+    "rooms": "Chambres",
+    "activities": "Activités",
     "about": "À propos",
     "gallery": "Galerie",
     "contact": "Contact",
     "bookNow": "Réserver"
   },
   "hero": {
-    "tagline": "Explorez les Terres Sauvages du Maroc",
-    "subtitle": "Circuits guidés par des experts — VTT, e-bike, ski, randonnée et séjours authentiques dans l'Atlas",
-    "ctaTours": "Voir les Excursions",
-    "ctaStay": "Réserver un Séjour"
-  },
-  "categories": {
-    "mtb": "VTT",
-    "ebike": "E-Bike",
-    "ski": "Ski",
-    "trekking": "Randonnée",
-    "stay": "Gîte Panorama"
+    "tagline": "Gîte Panorama — Imlil, Maroc",
+    "subtitle": "Une maison d'hôtes familiale au pied du Toubkal avec une vue imprenable sur l'Atlas, des repas marocains faits maison et une hospitalité berbère chaleureuse.",
+    "ctaRooms": "Voir les Chambres",
+    "ctaContact": "Nous Contacter"
   },
   "stats": {
-    "years": "15+ Ans",
-    "yearsLabel": "d'Expérience",
+    "years": "2010",
+    "yearsLabel": "Fondé à Imlil",
     "guests": "500+",
     "guestsLabel": "Clients Satisfaits",
     "rating": "4.9★",
-    "ratingLabel": "Note",
+    "ratingLabel": "Note Google",
     "countries": "30+",
     "countriesLabel": "Pays"
   },
-  "featured": {
-    "title": "Nos Aventures Incontournables",
-    "subtitle": "Des expériences soigneusement sélectionnées au cœur des montagnes de l'Atlas",
-    "viewAll": "Voir Toutes les Excursions"
-  },
-  "giteTeaser": {
-    "title": "Séjournez au Pied du Toubkal",
-    "subtitle": "Gîte Panorama — votre refuge de montagne à Imlil, avec une vue imprenable sur l'Atlas, une hospitalité chaleureuse et tout le confort après une journée d'aventure.",
-    "cta": "Découvrir le Gîte",
-    "badge": "4.9★ · 31 Avis Google"
-  },
-  "testimonials": {
-    "title": "Ce Que Disent Nos Clients"
-  },
-  "tour": {
-    "duration": "Durée",
-    "difficulty": "Niveau",
-    "groupSize": "Taille du groupe",
-    "meetingPoint": "Point de rendez-vous",
-    "included": "Inclus",
-    "notIncluded": "Non inclus",
-    "itinerary": "Itinéraire",
-    "overview": "Aperçu",
-    "practical": "Infos pratiques",
-    "bookThis": "Réserver ce circuit",
+  "rooms": {
+    "title": "Choisissez Votre Chambre",
+    "subtitle": "Chaque chambre a été conçue pour le confort après une journée en montagne.",
+    "viewAll": "Voir Toutes les Chambres",
     "from": "À partir de",
+    "perNight": "/ nuit",
+    "bookThis": "Réserver cette chambre",
+    "details": "Voir les détails"
+  },
+  "activities": {
+    "title": "Activités à la Journée",
+    "subtitle": "Profitez de votre séjour avec une expérience locale encadrée par la famille Aitidar.",
+    "duration": "Durée",
+    "price": "Prix",
     "perPerson": "par personne",
-    "days": "jours",
-    "day": "Jour",
-    "persons": "personnes",
-    "difficulty_beginner": "Débutant",
-    "difficulty_intermediate": "Intermédiaire",
-    "difficulty_advanced": "Avancé",
-    "category_mtb": "VTT",
-    "category_ebike": "E-Bike",
-    "category_ski": "Ski",
-    "category_trekking": "Randonnée"
+    "bookThis": "Réserver cette activité",
+    "comingSoon": "D'autres activités arrivent bientôt"
   },
   "booking": {
-    "title": "Réservez Votre Place",
+    "title": "Réservez Votre Séjour",
     "name": "Nom complet",
     "email": "Adresse e-mail",
     "phone": "Téléphone / WhatsApp",
-    "date": "Date(s) souhaitée(s)",
-    "groupSize": "Taille du groupe",
-    "message": "Message (facultatif)",
+    "date": "Date d'arrivée",
+    "checkOut": "Date de départ",
+    "groupSize": "Nombre de personnes",
+    "message": "Demandes spéciales (facultatif)",
     "submit": "Envoyer la demande",
     "sending": "Envoi en cours...",
     "successTitle": "Demande envoyée !",
     "successMessage": "Merci ! Nous confirmerons votre réservation dans les 24 heures. Consultez votre boîte mail pour notre réponse.",
-    "whatsappAlt": "Préférez-vous chatter ? Écrivez-nous sur WhatsApp",
+    "whatsappAlt": "Préférez WhatsApp ? Écrivez-nous directement",
     "namePlaceholder": "Votre nom complet",
     "emailPlaceholder": "votre@email.com",
     "phonePlaceholder": "+33 6 12 34 56 78",
-    "datePlaceholder": "ex : 15-16 juillet 2026",
-    "messagePlaceholder": "Des questions ou demandes particulières ?",
-    "tourLabel": "Circuit"
+    "datePlaceholder": "ex : 15 juillet 2026",
+    "checkOutPlaceholder": "ex : 18 juillet 2026",
+    "messagePlaceholder": "Régime alimentaire, heure d'arrivée, préférences de chambre...",
+    "tourLabel": "Réservation pour"
   },
   "accommodation": {
     "title": "Gîte Panorama",
     "subtitle": "Votre refuge de montagne au cœur d'Imlil",
-    "description": "Niché dans le village d'Imlil au pied du Parc National du Toubkal, le Gîte Panorama offre un séjour authentique en montagne avec des vues époustouflantes sur l'Atlas, des repas marocains faits maison et une base idéale pour vos aventures.",
-    "from": "À partir de",
-    "perNight": "/ nuit",
-    "contactAvailability": "Contactez-nous pour les disponibilités",
-    "amenities": "Équipements",
+    "description": "Niché dans le village d'Imlil au pied du Parc National du Toubkal, le Gîte Panorama offre un séjour authentique en montagne avec des vues époustouflantes sur l'Atlas, des repas marocains faits maison et une base idéale pour explorer le Haut Atlas.",
+    "amenities": "Équipements & Services",
     "location": "Emplacement",
     "bookStay": "Réserver votre séjour",
     "checkIn": "Date d'arrivée",
@@ -105,11 +77,11 @@
   },
   "about": {
     "title": "Notre Histoire",
-    "subtitle": "Nés dans l'Atlas, construits sur la passion"
+    "subtitle": "La famille Aitidar — hôtes à Imlil depuis 2010"
   },
   "contact": {
     "title": "Contactez-nous",
-    "subtitle": "Nous serions ravis de vous entendre",
+    "subtitle": "Nous serions ravis de vous accueillir au Gîte Panorama",
     "phone": "Téléphone",
     "whatsapp": "WhatsApp",
     "email": "Email",
@@ -117,9 +89,9 @@
     "sendMessage": "Envoyer le message"
   },
   "footer": {
-    "tagline": "Aventures guidées par des experts dans les montagnes de l'Atlas depuis 2010.",
-    "tours": "Excursions",
-    "company": "Entreprise",
+    "tagline": "Une maison d'hôtes familiale à Imlil au pied des montagnes de l'Atlas.",
+    "explore": "Explorer",
+    "company": "À propos",
     "legal": "Mentions légales",
     "privacy": "Politique de confidentialité",
     "terms": "Conditions générales",
@@ -128,21 +100,12 @@
   "whatsapp": {
     "tooltip": "Chattez avec nous sur WhatsApp"
   },
-  "filter": {
-    "all": "Toutes les excursions",
-    "type": "Activité",
-    "duration": "Durée",
-    "difficulty": "Niveau",
-    "dayTour": "Journée",
-    "multiDay": "2-3 Jours",
-    "weekPlus": "7+ Jours",
-    "allTypes": "Toutes les activités",
-    "allDurations": "Toute durée",
-    "allDifficulties": "Tout niveau"
-  },
   "gallery": {
-    "title": "Galerie",
-    "subtitle": "Des moments dans les montagnes"
+    "title": "Notre Gîte",
+    "subtitle": "Vues, chambres et moments du Gîte Panorama"
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients"
   },
   "notFound": {
     "title": "Page introuvable",

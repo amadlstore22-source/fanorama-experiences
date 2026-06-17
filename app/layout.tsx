@@ -13,24 +13,24 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://fanorama-experiences.vercel.app"),
   title: {
-    default: "Fanorama Experiences — Atlas Mountain Adventures & Gite Panorama",
-    template: "%s | Fanorama Experiences",
+    default: "Gite Panorama Imlil — Guesthouse at the Foot of Toubkal",
+    template: "%s | Gite Panorama Imlil",
   },
   description:
-    "Discover Morocco's Atlas Mountains with expert-guided MTB tours, e-bike adventures, ski tours, trekking, and authentic accommodation at Gite Panorama in Imlil.",
+    "Stay at Gite Panorama in Imlil, Morocco. Panoramic Atlas views, home-cooked Moroccan meals, and warm Berber hospitality. Rated 4.9★ Google · 9.1 Booking.com.",
   keywords: [
-    "morocco adventure tours",
-    "atlas mountains bike tour",
-    "imlil trekking",
-    "morocco ski tour",
-    "e-bike morocco",
-    "gite imlil",
     "gite panorama imlil",
-    "mountain bike morocco",
+    "gite imlil",
+    "accommodation imlil morocco",
+    "imlil guesthouse",
+    "toubkal guesthouse",
     "atlas mountains accommodation",
-    "toubkal trekking",
-    "morocco guided tours",
-    "fanorama experiences",
+    "berber guesthouse morocco",
+    "imlil bed and breakfast",
+    "gite atlas mountains",
+    "morocco mountain accommodation",
+    "imlil hotel",
+    "toubkal national park accommodation",
   ],
   authors: [{ name: "Fanorama Experiences" }],
   creator: "Fanorama Experiences",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     alternateLocale: "fr_FR",
     siteName: "Fanorama Experiences",
-    title: "Fanorama Experiences — Atlas Mountain Adventures & Gite Panorama",
+    title: "Gite Panorama Imlil — Guesthouse at the Foot of Toubkal",
     description:
-      "Expert-guided MTB, e-bike, ski and trekking adventures in Morocco's Atlas Mountains. Authentic accommodation at Gite Panorama in Imlil.",
+      "Stay at Gite Panorama in Imlil, Morocco. Panoramic Atlas views, home-cooked Moroccan meals, and warm Berber hospitality. Rated 4.9★ on Google.",
     url: "https://fanorama-experiences.vercel.app",
     images: [
       {
@@ -54,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fanorama Experiences — Atlas Mountain Adventures",
+    title: "Gite Panorama Imlil — Guesthouse at the Foot of Toubkal",
     description:
-      "Expert-guided MTB, e-bike, ski and trekking in Morocco's Atlas Mountains. Book your adventure at Gite Panorama, Imlil.",
+      "Stay at Gite Panorama in Imlil, Morocco. Panoramic Atlas views, Moroccan meals, Berber hospitality. 4.9★ Google · 9.1 Booking.com.",
     images: ["/images/og-image.jpg"],
   },
   robots: {
