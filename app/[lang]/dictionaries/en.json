@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "tours": "Tours",
+    "accommodation": "Accommodation",
+    "about": "About",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "bookNow": "Book Now"
+  },
+  "hero": {
+    "tagline": "Explore Morocco's Wildest Terrain",
+    "subtitle": "Expert-guided bike tours, ski adventures, trekking, and authentic stays in the Atlas Mountains",
+    "ctaTours": "Explore Tours",
+    "ctaStay": "Book a Stay"
+  },
+  "categories": {
+    "mtb": "Mountain Biking",
+    "ebike": "E-Bike Tours",
+    "ski": "Ski Tours",
+    "trekking": "Trekking",
+    "stay": "Gite Panorama"
+  },
+  "stats": {
+    "years": "15+ Years",
+    "yearsLabel": "Experience",
+    "guests": "500+",
+    "guestsLabel": "Happy Guests",
+    "rating": "4.9★",
+    "ratingLabel": "Rated",
+    "countries": "30+",
+    "countriesLabel": "Countries"
+  },
+  "featured": {
+    "title": "Our Most Loved Adventures",
+    "subtitle": "Hand-picked experiences in the heart of Morocco's Atlas Mountains",
+    "viewAll": "View All Tours"
+  },
+  "giteTeaser": {
+    "title": "Stay at the Foot of Toubkal",
+    "subtitle": "Gite Panorama — your mountain home in Imlil, with breathtaking Atlas views, warm hospitality, and all the comforts you need after a day of adventure.",
+    "cta": "Discover the Gite",
+    "badge": "4.9★ · 31 Google Reviews"
+  },
+  "testimonials": {
+    "title": "What Our Guests Say"
+  },
+  "tour": {
+    "duration": "Duration",
+    "difficulty": "Difficulty",
+    "groupSize": "Group Size",
+    "meetingPoint": "Meeting Point",
+    "included": "What's Included",
+    "notIncluded": "Not Included",
+    "itinerary": "Itinerary",
+    "overview": "Overview",
+    "practical": "Practical Info",
+    "bookThis": "Book This Tour",
+    "from": "From",
+    "perPerson": "per person",
+    "days": "days",
+    "day": "Day",
+    "persons": "persons",
+    "difficulty_beginner": "Beginner",
+    "difficulty_intermediate": "Intermediate",
+    "difficulty_advanced": "Advanced",
+    "category_mtb": "MTB",
+    "category_ebike": "E-Bike",
+    "category_ski": "Ski",
+    "category_trekking": "Trekking"
+  },
+  "booking": {
+    "title": "Reserve Your Spot",
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone / WhatsApp",
+    "date": "Preferred Date(s)",
+    "groupSize": "Group Size",
+    "message": "Message (optional)",
+    "submit": "Send Booking Request",
+    "sending": "Sending...",
+    "successTitle": "Request Sent!",
+    "successMessage": "Thank you! We'll confirm your booking within 24 hours. Check your inbox for our reply.",
+    "whatsappAlt": "Prefer to chat? Message us on WhatsApp",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "your@email.com",
+    "phonePlaceholder": "+1 234 567 8900",
+    "datePlaceholder": "e.g. July 15-16, 2026",
+    "messagePlaceholder": "Any questions or special requests?",
+    "tourLabel": "Tour"
+  },
+  "accommodation": {
+    "title": "Gite Panorama",
+    "subtitle": "Your mountain refuge in the heart of Imlil",
+    "description": "Nestled in the village of Imlil at the foot of Toubkal National Park, Gite Panorama offers a warm, authentic mountain stay with breathtaking Atlas views, home-cooked Moroccan meals, and the perfect base for your adventures.",
+    "from": "From",
+    "perNight": "/ night",
+    "contactAvailability": "Contact us for availability",
+    "amenities": "Amenities",
+    "location": "Location",
+    "bookStay": "Book Your Stay",
+    "checkIn": "Check-in Date",
+    "checkOut": "Check-out Date",
+    "guests": "Number of Guests",
+    "roomPreferences": "Room Preferences / Notes"
+  },
+  "about": {
+    "title": "Our Story",
+    "subtitle": "Born in the Atlas Mountains, built on passion"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "We'd love to hear from you",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Address",
+    "sendMessage": "Send Message"
+  },
+  "footer": {
+    "tagline": "Expert-guided adventures in Morocco's Atlas Mountains since 2010.",
+    "tours": "Tours",
+    "company": "Company",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "rights": "All rights reserved."
+  },
+  "whatsapp": {
+    "tooltip": "Chat with us on WhatsApp"
+  },
+  "filter": {
+    "all": "All Tours",
+    "type": "Activity",
+    "duration": "Duration",
+    "difficulty": "Difficulty",
+    "dayTour": "Day Tour",
+    "multiDay": "2-3 Days",
+    "weekPlus": "7+ Days",
+    "allTypes": "All Activities",
+    "allDurations": "Any Duration",
+    "allDifficulties": "Any Level"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Moments from the mountains"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "message": "The page you're looking for doesn't exist.",
+    "back": "Back to Home"
+  }
+}

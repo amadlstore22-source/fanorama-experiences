@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "tours": "Excursions",
+    "accommodation": "Hébergement",
+    "about": "À propos",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "bookNow": "Réserver"
+  },
+  "hero": {
+    "tagline": "Explorez les Terres Sauvages du Maroc",
+    "subtitle": "Circuits guidés par des experts — VTT, e-bike, ski, randonnée et séjours authentiques dans l'Atlas",
+    "ctaTours": "Voir les Excursions",
+    "ctaStay": "Réserver un Séjour"
+  },
+  "categories": {
+    "mtb": "VTT",
+    "ebike": "E-Bike",
+    "ski": "Ski",
+    "trekking": "Randonnée",
+    "stay": "Gîte Panorama"
+  },
+  "stats": {
+    "years": "15+ Ans",
+    "yearsLabel": "d'Expérience",
+    "guests": "500+",
+    "guestsLabel": "Clients Satisfaits",
+    "rating": "4.9★",
+    "ratingLabel": "Note",
+    "countries": "30+",
+    "countriesLabel": "Pays"
+  },
+  "featured": {
+    "title": "Nos Aventures Incontournables",
+    "subtitle": "Des expériences soigneusement sélectionnées au cœur des montagnes de l'Atlas",
+    "viewAll": "Voir Toutes les Excursions"
+  },
+  "giteTeaser": {
+    "title": "Séjournez au Pied du Toubkal",
+    "subtitle": "Gîte Panorama — votre refuge de montagne à Imlil, avec une vue imprenable sur l'Atlas, une hospitalité chaleureuse et tout le confort après une journée d'aventure.",
+    "cta": "Découvrir le Gîte",
+    "badge": "4.9★ · 31 Avis Google"
+  },
+  "testimonials": {
+    "title": "Ce Que Disent Nos Clients"
+  },
+  "tour": {
+    "duration": "Durée",
+    "difficulty": "Niveau",
+    "groupSize": "Taille du groupe",
+    "meetingPoint": "Point de rendez-vous",
+    "included": "Inclus",
+    "notIncluded": "Non inclus",
+    "itinerary": "Itinéraire",
+    "overview": "Aperçu",
+    "practical": "Infos pratiques",
+    "bookThis": "Réserver ce circuit",
+    "from": "À partir de",
+    "perPerson": "par personne",
+    "days": "jours",
+    "day": "Jour",
+    "persons": "personnes",
+    "difficulty_beginner": "Débutant",
+    "difficulty_intermediate": "Intermédiaire",
+    "difficulty_advanced": "Avancé",
+    "category_mtb": "VTT",
+    "category_ebike": "E-Bike",
+    "category_ski": "Ski",
+    "category_trekking": "Randonnée"
+  },
+  "booking": {
+    "title": "Réservez Votre Place",
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "phone": "Téléphone / WhatsApp",
+    "date": "Date(s) souhaitée(s)",
+    "groupSize": "Taille du groupe",
+    "message": "Message (facultatif)",
+    "submit": "Envoyer la demande",
+    "sending": "Envoi en cours...",
+    "successTitle": "Demande envoyée !",
+    "successMessage": "Merci ! Nous confirmerons votre réservation dans les 24 heures. Consultez votre boîte mail pour notre réponse.",
+    "whatsappAlt": "Préférez-vous chatter ? Écrivez-nous sur WhatsApp",
+    "namePlaceholder": "Votre nom complet",
+    "emailPlaceholder": "votre@email.com",
+    "phonePlaceholder": "+33 6 12 34 56 78",
+    "datePlaceholder": "ex : 15-16 juillet 2026",
+    "messagePlaceholder": "Des questions ou demandes particulières ?",
+    "tourLabel": "Circuit"
+  },
+  "accommodation": {
+    "title": "Gîte Panorama",
+    "subtitle": "Votre refuge de montagne au cœur d'Imlil",
+    "description": "Niché dans le village d'Imlil au pied du Parc National du Toubkal, le Gîte Panorama offre un séjour authentique en montagne avec des vues époustouflantes sur l'Atlas, des repas marocains faits maison et une base idéale pour vos aventures.",
+    "from": "À partir de",
+    "perNight": "/ nuit",
+    "contactAvailability": "Contactez-nous pour les disponibilités",
+    "amenities": "Équipements",
+    "location": "Emplacement",
+    "bookStay": "Réserver votre séjour",
+    "checkIn": "Date d'arrivée",
+    "checkOut": "Date de départ",
+    "guests": "Nombre de personnes",
+    "roomPreferences": "Préférences de chambre / Notes"
+  },
+  "about": {
+    "title": "Notre Histoire",
+    "subtitle": "Nés dans l'Atlas, construits sur la passion"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous serions ravis de vous entendre",
+    "phone": "Téléphone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Adresse",
+    "sendMessage": "Envoyer le message"
+  },
+  "footer": {
+    "tagline": "Aventures guidées par des experts dans les montagnes de l'Atlas depuis 2010.",
+    "tours": "Excursions",
+    "company": "Entreprise",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions générales",
+    "rights": "Tous droits réservés."
+  },
+  "whatsapp": {
+    "tooltip": "Chattez avec nous sur WhatsApp"
+  },
+  "filter": {
+    "all": "Toutes les excursions",
+    "type": "Activité",
+    "duration": "Durée",
+    "difficulty": "Niveau",
+    "dayTour": "Journée",
+    "multiDay": "2-3 Jours",
+    "weekPlus": "7+ Jours",
+    "allTypes": "Toutes les activités",
+    "allDurations": "Toute durée",
+    "allDifficulties": "Tout niveau"
+  },
+  "gallery": {
+    "title": "Galerie",
+    "subtitle": "Des moments dans les montagnes"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "message": "La page que vous recherchez n'existe pas.",
+    "back": "Retour à l'accueil"
+  }
+}
