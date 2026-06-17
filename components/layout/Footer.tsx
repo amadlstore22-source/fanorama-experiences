@@ -75,9 +75,9 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
 
           {/* Tours */}
           <div>
-            <h4 className="font-heading text-base text-white font-semibold mb-5 uppercase tracking-wider">
+            <h3 className="font-heading text-base text-white font-semibold mb-5 uppercase tracking-wider">
               {dict.footer.tours}
-            </h4>
+            </h3>
             <ul className="flex flex-col gap-3">
               {tourLinks.map((l) => (
                 <li key={l.href}>
@@ -92,9 +92,9 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
 
           {/* Company */}
           <div>
-            <h4 className="font-heading text-base text-white font-semibold mb-5 uppercase tracking-wider">
+            <h3 className="font-heading text-base text-white font-semibold mb-5 uppercase tracking-wider">
               {dict.footer.company}
-            </h4>
+            </h3>
             <ul className="flex flex-col gap-3">
               {companyLinks.map((l) => (
                 <li key={l.href}>

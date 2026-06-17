@@ -88,7 +88,7 @@ export default function Navbar({ lang, dict }: { lang: string; dict: Dict }) {
               href={`/${lang}/contact`}
               className={cn(
                 buttonVariants(),
-                "bg-terracotta hover:bg-terracotta-dark text-white rounded-full px-6 text-sm border-0 shadow-md hover:shadow-terracotta/40 transition-all duration-200"
+                "bg-[#A54E22] hover:bg-[#8B4019] text-white rounded-full px-6 text-sm border-0 shadow-md hover:shadow-terracotta/40 transition-all duration-200"
               )}
             >
               {dict.nav.bookNow}
@@ -136,7 +136,7 @@ export default function Navbar({ lang, dict }: { lang: string; dict: Dict }) {
                     <Link
                       href={`/${lang}/contact`}
                       onClick={() => setOpen(false)}
-                      className="flex items-center justify-center w-full bg-terracotta hover:bg-terracotta-dark text-white rounded-full py-3 text-sm font-semibold transition-colors"
+                      className="flex items-center justify-center w-full bg-[#A54E22] hover:bg-[#8B4019] text-white rounded-full py-3 text-sm font-semibold transition-colors"
                     >
                       {dict.nav.bookNow}
                     </Link>

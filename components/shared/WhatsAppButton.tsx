@@ -35,11 +35,11 @@ export default function WhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       title={dict.whatsapp.tooltip}
-      className="fixed bottom-20 left-6 z-50 flex items-center gap-2 bg-[#25D366] text-white px-4 py-3 rounded-full shadow-lg hover:bg-[#1ebe5d] transition-all duration-200 hover:scale-105 group"
+      className="fixed bottom-20 left-6 z-50 flex items-center gap-2 bg-[#128C4A] text-white px-4 py-3 rounded-full shadow-lg hover:bg-[#0e6e3a] transition-all duration-200 hover:scale-105 group"
       aria-label={dict.whatsapp.tooltip}
     >
       <MessageCircle className="w-5 h-5 fill-white" />
-      <span className="text-sm font-medium hidden sm:block">WhatsApp</span>
+      <span className="text-sm font-semibold hidden sm:block">WhatsApp</span>
     </a>
   );
 }

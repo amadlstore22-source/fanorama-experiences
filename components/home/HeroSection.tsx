@@ -105,7 +105,7 @@ export default function HeroSection({ lang, dict }: { lang: string; dict: Dict }
           </Link>
           <Link
             href={`/${lang}/accommodation`}
-            className="inline-flex items-center justify-center h-11 px-8 text-base rounded-full border border-white/40 text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-200 hover:scale-105 hover:border-white/70"
+            className="inline-flex items-center justify-center h-11 px-8 text-base rounded-full border border-white/60 text-white bg-black/40 hover:bg-black/60 backdrop-blur-sm transition-all duration-200 hover:scale-105 hover:border-white"
           >
             {dict.hero.ctaStay}
           </Link>
