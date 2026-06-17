@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 type Dict = { testimonials: { title: string } };
 
@@ -52,47 +52,67 @@ const testimonials = [
 
 export default function TestimonialsSection({ dict }: { dict: Dict }) {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-charcoal overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="text-center mb-12"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-heading text-4xl md:text-5xl font-bold text-charcoal mb-3">
+          <span className="inline-block text-saffron text-xs font-semibold tracking-[0.3em] uppercase mb-4">
+            Real Guests · Real Experiences
+          </span>
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-4">
             {dict.testimonials.title}
           </h2>
-          <div className="inline-flex items-center gap-1.5 text-sm text-muted-warm">
+          <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-5 py-2 text-sm text-white/70">
             <div className="flex gap-0.5">
               {Array.from({ length: 5 }).map((_, j) => (
-                <Star key={j} className="w-4 h-4 fill-saffron text-saffron" />
+                <Star key={j} className="w-3.5 h-3.5 fill-saffron text-saffron" />
               ))}
             </div>
-            <span className="font-semibold text-charcoal">4.9</span>
+            <span className="font-semibold text-white">4.9</span>
             <span>· 31 reviews on Google</span>
           </div>
         </motion.div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.name}
-              className="bg-sand rounded-2xl p-6 border border-border flex flex-col"
-              initial={{ opacity: 0, y: 20 }}
+              className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-7 border border-white/10 hover:border-saffron/30 hover:bg-white/8 transition-all duration-300 flex flex-col group"
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
+              transition={{ delay: i * 0.08, duration: 0.5 }}
             >
-              <div className="flex gap-1 mb-3">
+              {/* Large quote mark */}
+              <Quote className="absolute top-5 right-6 w-10 h-10 text-white/5 group-hover:text-saffron/10 transition-colors fill-current" />
+
+              <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: t.rating }).map((_, j) => (
                   <Star key={j} className="w-4 h-4 fill-saffron text-saffron" />
                 ))}
               </div>
-              <p className="text-charcoal/80 text-sm leading-relaxed mb-5 italic flex-1">"{t.text}"</p>
-              <div>
-                <div className="font-semibold text-charcoal text-sm">{t.name}</div>
-                <div className="text-muted-warm text-xs">{t.country}</div>
-                <div className="text-muted-warm/70 text-xs mt-0.5">{t.badge}</div>
+
+              <p className="text-white/75 text-sm leading-relaxed mb-6 flex-1 italic">
+                "{t.text}"
+              </p>
+
+              <div className="flex items-center gap-3 pt-5 border-t border-white/10">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-terracotta to-saffron flex items-center justify-center text-white font-bold text-sm font-heading shrink-0">
+                  {t.name.charAt(0)}
+                </div>
+                <div>
+                  <div className="font-semibold text-white text-sm">{t.name}</div>
+                  <div className="text-white/40 text-xs">{t.country}</div>
+                </div>
+                <div className="ml-auto">
+                  <span className="text-[10px] text-white/30 bg-white/5 px-2 py-1 rounded-full">
+                    {t.badge}
+                  </span>
+                </div>
               </div>
             </motion.div>
           ))}

@@ -103,10 +103,10 @@ Sent via Fanorama Experiences website
 
   if (sent) {
     return (
-      <div className="bg-white rounded-2xl border border-border p-8 text-center">
+      <div className="bg-[#1a1917] border border-white/10 rounded-2xl p-8 text-center">
         <CheckCircle2 className="w-12 h-12 text-atlas-green mx-auto mb-4" />
-        <h3 className="font-heading text-2xl font-bold text-charcoal mb-2">{b.successTitle}</h3>
-        <p className="text-muted-warm text-sm mb-6">{b.successMessage}</p>
+        <h3 className="font-heading text-2xl font-bold text-white mb-2">{b.successTitle}</h3>
+        <p className="text-white/50 text-sm mb-6">{b.successMessage}</p>
         <a href={waUrl} target="_blank" rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm text-[#25D366] font-medium hover:underline">
           <MessageCircle className="w-4 h-4" /> {b.whatsappAlt}
@@ -116,44 +116,44 @@ Sent via Fanorama Experiences website
   }
 
   return (
-    <div className="bg-white rounded-2xl border border-border p-6 md:p-8">
-      <h3 className="font-heading text-2xl font-bold text-charcoal mb-1">{b.title}</h3>
-      <p className="text-muted-warm text-sm mb-6">{b.tourLabel}: <span className="font-medium text-charcoal">{tourName}</span></p>
+    <div className="bg-[#1a1917] border border-white/10 rounded-2xl p-6 md:p-8">
+      <h3 className="font-heading text-2xl font-bold text-white mb-1">{b.title}</h3>
+      <p className="text-white/40 text-sm mb-6">{b.tourLabel}: <span className="font-medium text-saffron">{tourName}</span></p>
 
       <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
         <div>
-          <label className="text-sm font-medium text-charcoal mb-1.5 block">{b.name} *</label>
-          <Input {...register("name")} placeholder={b.namePlaceholder} className="bg-sand border-border" />
-          {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name.message}</p>}
+          <label className="text-sm font-medium text-white/70 mb-1.5 block">{b.name} *</label>
+          <Input {...register("name")} placeholder={b.namePlaceholder} className="bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-terracotta/50" />
+          {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name.message}</p>}
         </div>
         <div>
-          <label className="text-sm font-medium text-charcoal mb-1.5 block">{b.email} *</label>
-          <Input {...register("email")} type="email" placeholder={b.emailPlaceholder} className="bg-sand border-border" />
-          {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
+          <label className="text-sm font-medium text-white/70 mb-1.5 block">{b.email} *</label>
+          <Input {...register("email")} type="email" placeholder={b.emailPlaceholder} className="bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-terracotta/50" />
+          {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email.message}</p>}
         </div>
         <div>
-          <label className="text-sm font-medium text-charcoal mb-1.5 block">{b.phone}</label>
-          <Input {...register("phone")} type="tel" placeholder={b.phonePlaceholder} className="bg-sand border-border" />
+          <label className="text-sm font-medium text-white/70 mb-1.5 block">{b.phone}</label>
+          <Input {...register("phone")} type="tel" placeholder={b.phonePlaceholder} className="bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-terracotta/50" />
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className="text-sm font-medium text-charcoal mb-1.5 block">{b.date} *</label>
-            <Input {...register("date")} placeholder={b.datePlaceholder} className="bg-sand border-border" />
-            {errors.date && <p className="text-red-500 text-xs mt-1">{errors.date.message}</p>}
+            <label className="text-sm font-medium text-white/70 mb-1.5 block">{b.date} *</label>
+            <Input {...register("date")} placeholder={b.datePlaceholder} className="bg-white/5 border-white/10 text-white placeholder:text-white/20 focus:border-terracotta/50" />
+            {errors.date && <p className="text-red-400 text-xs mt-1">{errors.date.message}</p>}
           </div>
           <div>
-            <label className="text-sm font-medium text-charcoal mb-1.5 block">{b.groupSize}</label>
-            <Input {...register("groupSize", { valueAsNumber: true })} type="number" min={1} max={20} className="bg-sand border-border" />
+            <label className="text-sm font-medium text-white/70 mb-1.5 block">{b.groupSize}</label>
+            <Input {...register("groupSize", { valueAsNumber: true })} type="number" min={1} max={20} className="bg-white/5 border-white/10 text-white focus:border-terracotta/50" />
           </div>
         </div>
         <div>
-          <label className="text-sm font-medium text-charcoal mb-1.5 block">{b.message}</label>
-          <Textarea {...register("message")} placeholder={b.messagePlaceholder} rows={3} className="bg-sand border-border resize-none" />
+          <label className="text-sm font-medium text-white/70 mb-1.5 block">{b.message}</label>
+          <Textarea {...register("message")} placeholder={b.messagePlaceholder} rows={3} className="bg-white/5 border-white/10 text-white placeholder:text-white/20 resize-none focus:border-terracotta/50" />
         </div>
 
-        {error && <p className="text-red-500 text-sm">{error}</p>}
+        {error && <p className="text-red-400 text-sm">{error}</p>}
 
-        <Button type="submit" disabled={isSubmitting} className="w-full bg-terracotta hover:bg-terracotta-dark text-white rounded-full h-12 text-base">
+        <Button type="submit" disabled={isSubmitting} className="w-full bg-terracotta hover:bg-terracotta-dark text-white rounded-full h-12 text-base shadow-lg hover:shadow-terracotta/30 transition-all duration-200">
           {isSubmitting ? <><Loader2 className="w-4 h-4 mr-2 animate-spin" />{b.sending}</> : b.submit}
         </Button>
 

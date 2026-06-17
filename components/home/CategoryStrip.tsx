@@ -6,13 +6,47 @@ import { Bike, Zap, Snowflake, Footprints, Home } from "lucide-react";
 
 type Dict = { categories: { mtb: string; ebike: string; ski: string; trekking: string; stay: string } };
 
-const icons = [Bike, Zap, Snowflake, Footprints, Home];
-const colors = [
-  "bg-terracotta/10 text-terracotta",
-  "bg-atlas-green/10 text-atlas-green",
-  "bg-blue-50 text-blue-600",
-  "bg-saffron/10 text-saffron",
-  "bg-muted-warm/10 text-muted-warm",
+const categories_config = [
+  {
+    key: "mtb",
+    icon: Bike,
+    gradient: "from-terracotta/20 to-terracotta/5",
+    iconBg: "bg-terracotta",
+    border: "hover:border-terracotta/50",
+    glow: "hover:shadow-terracotta/20",
+  },
+  {
+    key: "ebike",
+    icon: Zap,
+    gradient: "from-atlas-green/20 to-atlas-green/5",
+    iconBg: "bg-atlas-green",
+    border: "hover:border-atlas-green/50",
+    glow: "hover:shadow-atlas-green/20",
+  },
+  {
+    key: "ski",
+    icon: Snowflake,
+    gradient: "from-blue-500/15 to-blue-500/5",
+    iconBg: "bg-blue-500",
+    border: "hover:border-blue-400/50",
+    glow: "hover:shadow-blue-400/20",
+  },
+  {
+    key: "trekking",
+    icon: Footprints,
+    gradient: "from-saffron/20 to-saffron/5",
+    iconBg: "bg-saffron",
+    border: "hover:border-saffron/50",
+    glow: "hover:shadow-saffron/20",
+  },
+  {
+    key: "stay",
+    icon: Home,
+    gradient: "from-charcoal/10 to-charcoal/5",
+    iconBg: "bg-charcoal",
+    border: "hover:border-charcoal/40",
+    glow: "hover:shadow-charcoal/10",
+  },
 ];
 
 export default function CategoryStrip({ lang, dict }: { lang: string; dict: Dict }) {
@@ -25,27 +59,28 @@ export default function CategoryStrip({ lang, dict }: { lang: string; dict: Dict
   ];
 
   return (
-    <section className="py-12 bg-white border-b border-border">
+    <section className="py-14 bg-white border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
           {categories.map((cat, i) => {
-            const Icon = icons[i];
+            const cfg = categories_config[i];
+            const Icon = cfg.icon;
             return (
               <motion.div
                 key={cat.key}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
+                transition={{ delay: i * 0.08, duration: 0.5 }}
               >
                 <Link
                   href={cat.href}
-                  className="flex flex-col items-center gap-3 p-5 rounded-2xl border border-border hover:border-terracotta hover:shadow-md transition-all duration-200 group text-center"
+                  className={`group flex flex-col items-center gap-4 p-6 rounded-2xl border border-border bg-gradient-to-br ${cfg.gradient} ${cfg.border} hover:shadow-lg ${cfg.glow} transition-all duration-300 hover:-translate-y-1 text-center`}
                 >
-                  <div className={`w-12 h-12 rounded-full flex items-center justify-center ${colors[i]} group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-5 h-5" />
+                  <div className={`w-14 h-14 rounded-2xl ${cfg.iconBg} flex items-center justify-center shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                    <Icon className="w-6 h-6 text-white" />
                   </div>
-                  <span className="text-sm font-medium text-charcoal group-hover:text-terracotta transition-colors">
+                  <span className="text-sm font-semibold text-charcoal group-hover:text-terracotta transition-colors leading-tight">
                     {cat.label}
                   </span>
                 </Link>
