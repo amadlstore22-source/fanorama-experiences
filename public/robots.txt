@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fanorama-experiences.vercel.app/sitemap.xml
