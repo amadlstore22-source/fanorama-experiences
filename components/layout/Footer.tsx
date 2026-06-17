@@ -102,7 +102,7 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
                 </li>
               ))}
               <li>
-                <a href="https://www.instagram.com/moroccobikeskitours"
+                <a href="https://www.instagram.com/imlil_panorama_lodge/"
                   target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-white/40 hover:text-terracotta transition-colors">
                   📷 Instagram

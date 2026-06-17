@@ -32,23 +32,23 @@ export const metadata: Metadata = {
     "imlil hotel",
     "toubkal national park accommodation",
   ],
-  authors: [{ name: "Fanorama Experiences" }],
-  creator: "Fanorama Experiences",
+  authors: [{ name: "Gite Panorama Imlil" }],
+  creator: "Gite Panorama Imlil",
   openGraph: {
     type: "website",
     locale: "en_US",
     alternateLocale: "fr_FR",
-    siteName: "Fanorama Experiences",
+    siteName: "Gite Panorama Imlil",
     title: "Gite Panorama Imlil — Guesthouse at the Foot of Toubkal",
     description:
-      "Stay at Gite Panorama in Imlil, Morocco. Panoramic Atlas views, home-cooked Moroccan meals, and warm Berber hospitality. Rated 4.9★ on Google.",
+      "Stay at Gite Panorama in Imlil, Morocco. Panoramic Atlas views, home-cooked Moroccan meals, and warm Berber hospitality. Rated 9.2 on Booking.com.",
     url: "https://fanorama-experiences.vercel.app",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Fanorama Experiences — Atlas Mountain Adventures",
+        alt: "Gite Panorama Imlil — Atlas Mountain Guesthouse",
       },
     ],
   },

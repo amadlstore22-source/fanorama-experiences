@@ -34,38 +34,38 @@ const amenities = [
 
 const reviews = [
   {
-    name: "Rhys Rogers",
+    name: "Rhys R.",
     country: "United Kingdom 🇬🇧",
     rating: 5,
     text: "A wonderful welcoming host family. Stunning views from the tranquil terrace overlooking Imlil and the walnut groves. A real sanctuary of peace.",
     highlights: ["Great view", "Quiet", "Great value"],
   },
   {
-    name: "Oussama Z",
+    name: "Oussama Z.",
     country: "Morocco 🇲🇦",
     rating: 5,
     text: "The view is simply magnificent — the most beautiful I have ever seen of the mountains and valley. I tasted the best tagine of my life here.",
-    highlights: ["Great view", "Great value"],
+    highlights: ["Great view", "Best tagine"],
   },
   {
-    name: "Leïla Calmet",
+    name: "Leïla C.",
     country: "France 🇫🇷",
     rating: 5,
     text: "What a view! That alone makes the experience incredible. We highly recommend this guesthouse in the hills above Imlil. We spent three nights there. Fantastic!",
-    highlights: ["Great view", "Quiet"],
+    highlights: ["Great view", "Quiet", "3-night stay"],
   },
   {
-    name: "Felicia Meshach",
+    name: "Felicia M.",
     country: "Nigeria 🇳🇬",
     rating: 5,
-    text: "My hosts, the Aitidar family, welcomed me with classic Berber hospitality. The accommodation was truly lovely, the food was delicious.",
+    text: "My hosts welcomed me with classic Berber hospitality. The accommodation was truly lovely, the food was delicious, and the breakfast view is unforgettable.",
     highlights: ["Hospitality", "Great view", "Great value"],
   },
 ];
 
 const stats = [
   { value: "4.9★", labelEn: "Google Rating", labelFr: "Note Google" },
-  { value: "9.1", labelEn: "Booking.com Score", labelFr: "Score Booking.com" },
+  { value: "9.2", labelEn: "Booking.com Score", labelFr: "Score Booking.com" },
   { value: "500+", labelEn: "Happy Guests", labelFr: "Clients Satisfaits" },
   { value: "30+", labelEn: "Countries", labelFr: "Pays" },
 ];
@@ -117,12 +117,12 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
           {/* Trust badges */}
           <div className="flex flex-wrap items-center justify-center gap-6 mt-12 text-white/50 text-xs">
             <span className="flex items-center gap-1.5">
-              <span className="text-saffron">★★★★★</span> 4.9 · 31 Google Reviews
+              <span className="text-saffron">★★★★★</span> 4.9 · Google Reviews
             </span>
             <span className="w-px h-3 bg-white/20" />
-            <span>9.1 Superb · Booking.com · 95 reviews</span>
+            <span>9.2 Superb · Booking.com</span>
             <span className="w-px h-3 bg-white/20" />
-            <span>Family-run since 2010</span>
+            <span>Family-run · Imlil, Morocco</span>
           </div>
         </div>
 
@@ -299,12 +299,19 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
               </h2>
               <p className="text-white/50 leading-relaxed mb-6">
                 {isFr
-                  ? "À seulement 6km de l'entrée du Parc National du Toubkal, notre gîte est idéalement situé pour explorer le Haut Atlas. Le village d'Imlil est à 5 minutes à pied."
-                  : "Just 6km from Toubkal National Park entrance, our gite is perfectly located for exploring the High Atlas. The village of Imlil is a 5-minute walk away."}
+                  ? "À seulement 400m de la cascade d'Imlil et à l'entrée du Parc National du Toubkal, notre gîte est idéalement placé pour explorer le Haut Atlas. Marrakech est à 63 km."
+                  : "Just 400m from Imlil waterfall and at the gateway to Toubkal National Park, our gite is the perfect base for the High Atlas. Marrakech is 63 km away."}
               </p>
-              <div className="flex items-center gap-2 text-white/40 text-sm">
-                <MapPin className="w-4 h-4 text-terracotta" />
-                Douar Imlil Asni, Imlil 42152, Morocco
+              <div className="flex flex-col gap-2 text-white/40 text-sm">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-terracotta shrink-0" />
+                  <span>Douar Imlil Asni, Imlil 42152, Morocco</span>
+                </div>
+                <div className="flex flex-wrap gap-4 mt-1 text-white/30 text-xs">
+                  <span>🏔 Cascade Imlil · 400m</span>
+                  <span>✈️ Marrakech Airport · 63 km</span>
+                  <span>🏙 Marrakech · 55 km</span>
+                </div>
               </div>
             </div>
             <div className="rounded-2xl overflow-hidden border border-white/10 h-64">
