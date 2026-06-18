@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
   }
 
   const { data, error } = await supabase
-    .from("bookings")
+    .from("bookins")
     .select("check_in, check_out")
     .eq("room_id", roomId)
     .in("status", ["pending", "confirmed"])

@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
   // Check for overlapping bookings on the same room
   // Overlap condition: existing.check_in < new.check_out AND existing.check_out > new.check_in
   const { data: overlapping, error: overlapError } = await supabase
-    .from("bookings")
+    .from("bookins")
     .select("check_in, check_out")
     .eq("room_id", room_id)
     .in("status", ["pending", "confirmed"])
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
 
   // All clear — create the booking
   const { data: booking, error: insertError } = await supabase
-    .from("bookings")
+    .from("bookins")
     .insert({
       room_id,
       guest_name,
@@ -72,7 +72,7 @@ export async function POST(request: NextRequest) {
 async function findAvailableRooms(checkIn: string, checkOut: string, excludeRoomId: string) {
   // Get all room IDs that have conflicting bookings in that window
   const { data: busyRooms } = await supabase
-    .from("bookings")
+    .from("bookins")
     .select("room_id")
     .in("status", ["pending", "confirmed"])
     .lt("check_in", checkOut)
