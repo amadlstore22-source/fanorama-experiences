@@ -158,21 +158,18 @@ Sent via Gite Panorama Imlil website
         EMAILJS_SERVICE,
         EMAILJS_TEMPLATE,
         {
-          tour_name: tourName,
-          from_name: data.name,
-          reply_to: data.email,
-          phone: data.phone || "—",
-          preferred_date: `${checkIn} → ${checkOut}`,
-          group_size: data.groupSize,
-          message: data.message || "—",
-          email_body: buildEmailBody(data),
+          title: `Booking Request — ${tourName}`,
+          name: data.name,
+          email: data.email,
+          message: buildEmailBody(data),
         },
         EMAILJS_PUBLIC
       );
 
       setWaUrl(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(buildWaMessage(data))}`);
       setSent(true);
-    } catch {
+    } catch (err) {
+      console.error("EmailJS error:", err);
       setError(isFr ? "Erreur d'envoi. Contactez-nous sur WhatsApp." : "Failed to send. Please contact us on WhatsApp.");
     } finally {
       setSubmitting(false);
