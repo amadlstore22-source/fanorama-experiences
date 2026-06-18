@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export async function generateMetadata({ params }: PageProps<"/[lang]/privacy">): Promise<Metadata> {
   const { lang } = await params;
   return {
-    title: lang === "fr" ? "Politique de Confidentialité | Fanorama Experiences" : "Privacy Policy | Fanorama Experiences",
+    title: lang === "fr" ? "Politique de Confidentialité | Gîte Panorama Imlil" : "Privacy Policy | Gite Panorama Imlil",
     robots: { index: false },
   };
 }
@@ -36,16 +36,16 @@ export default async function PrivacyPage({ params }: PageProps<"/[lang]/privacy
             </h2>
             {isFr ? (
               <p>
-                Fanorama Experiences est une entreprise touristique basée à Douar Imlil, Asni Al Haouz, Maroc (code postal 42152),
-                exploitant le Gîte Panorama et organisant des circuits d'aventure dans les montagnes de l'Atlas. Pour toute question
+                Gîte Panorama est une maison d'hôtes familiale basée à Douar Imlil, Asni Al Haouz, Maroc (code postal 42152),
+                proposant des hébergements et des activités d'une journée à Imlil. Pour toute question
                 relative à la présente politique, vous pouvez nous contacter à :{" "}
                 <a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a> ou
                 au +212 653 936 003.
               </p>
             ) : (
               <p>
-                Fanorama Experiences is a tourism business based at Douar Imlil, Asni Al Haouz, Morocco (postal code 42152),
-                operating Gite Panorama and organising adventure tours in the Atlas Mountains. For any questions regarding this
+                Gite Panorama is a family-run guesthouse based at Douar Imlil, Asni Al Haouz, Morocco (postal code 42152),
+                offering accommodation and day activities in Imlil. For any questions regarding this
                 policy, contact us at:{" "}
                 <a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a> or
                 +212 653 936 003.
@@ -94,14 +94,14 @@ export default async function PrivacyPage({ params }: PageProps<"/[lang]/privacy
             </h2>
             {isFr ? (
               <ul className="list-disc pl-5 space-y-2">
-                <li>Traiter et confirmer vos demandes de réservation de circuits ou d'hébergement.</li>
+                <li>Traiter et confirmer vos demandes de réservation d'hébergement ou d'activités.</li>
                 <li>Vous contacter par e-mail ou WhatsApp concernant votre réservation.</li>
                 <li>Répondre à vos questions et demandes d'information.</li>
                 <li>Améliorer nos services sur la base de retours généraux (sans identifier les personnes).</li>
               </ul>
             ) : (
               <ul className="list-disc pl-5 space-y-2">
-                <li>Process and confirm your tour or accommodation booking requests.</li>
+                <li>Process and confirm your accommodation or activity booking requests.</li>
                 <li>Contact you by email or WhatsApp regarding your booking.</li>
                 <li>Respond to your questions and information requests.</li>
                 <li>Improve our services based on general feedback (without identifying individuals).</li>
@@ -291,7 +291,7 @@ export default async function PrivacyPage({ params }: PageProps<"/[lang]/privacy
               {isFr ? "Pour toute question relative à la présente politique :" : "For any questions regarding this policy:"}
             </p>
             <div className="mt-3 text-sm space-y-1">
-              <p><strong>Fanorama Experiences</strong></p>
+              <p><strong>Gite Panorama Imlil</strong></p>
               <p>Douar Imlil, Asni Al Haouz, Imlil 42152, Morocco</p>
               <p><a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a></p>
               <p>+212 653 936 003</p>

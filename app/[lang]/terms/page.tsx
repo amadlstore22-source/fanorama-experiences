@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export async function generateMetadata({ params }: PageProps<"/[lang]/terms">): Promise<Metadata> {
   const { lang } = await params;
   return {
-    title: lang === "fr" ? "Conditions Générales | Fanorama Experiences" : "Terms & Conditions | Fanorama Experiences",
+    title: lang === "fr" ? "Conditions Générales | Gîte Panorama Imlil" : "Terms & Conditions | Gite Panorama Imlil",
     robots: { index: false },
   };
 }
@@ -36,7 +36,7 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
             </h2>
             {isFr ? (
               <p>
-                Le présent site est exploité par <strong>Fanorama Experiences</strong>, entreprise touristique basée à
+                Le présent site est exploité par <strong>Gîte Panorama</strong>, maison d'hôtes familiale basée à
                 Douar Imlil, Asni Al Haouz, Imlil 42152, Maroc. Contact :{" "}
                 <a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a>{" "}
                 — +212 653 936 003. En accédant à ce site et en effectuant une réservation, vous acceptez les présentes
@@ -44,7 +44,7 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
               </p>
             ) : (
               <p>
-                This website is operated by <strong>Fanorama Experiences</strong>, a tourism business based at
+                This website is operated by <strong>Gite Panorama</strong>, a family-run guesthouse based at
                 Douar Imlil, Asni Al Haouz, Imlil 42152, Morocco. Contact:{" "}
                 <a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a>{" "}
                 — +212 653 936 003. By accessing this site and making a booking, you agree to these terms in full.
@@ -59,15 +59,14 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
             </h2>
             {isFr ? (
               <p>
-                Fanorama Experiences propose des circuits d'aventure guidés (VTT, e-bike, ski, randonnée) dans les montagnes
-                de l'Atlas au Maroc, ainsi que des séjours d'hébergement au Gîte Panorama à Imlil. Tous les services sont
-                soumis à disponibilité et confirmation par nos équipes.
+                Gîte Panorama propose des hébergements en chambres et des activités d'une journée (cours de cuisine,
+                randonnées guidées) à Imlil, au pied du Parc National du Toubkal. Tous les services sont soumis à
+                disponibilité et confirmation par notre équipe.
               </p>
             ) : (
               <p>
-                Fanorama Experiences offers guided adventure tours (MTB, e-bike, ski, trekking) in Morocco's Atlas Mountains,
-                as well as accommodation stays at Gite Panorama in Imlil. All services are subject to availability and
-                confirmation by our team.
+                Gite Panorama offers guesthouse accommodation and day activities (cooking classes, guided hikes) in Imlil,
+                at the gateway to Toubkal National Park. All services are subject to availability and confirmation by our team.
               </p>
             )}
           </section>
@@ -142,8 +141,8 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
                   <li>Moins de 15 jours avant le départ : l'acompte est non remboursable.</li>
                   <li>Non-présentation (no-show) : aucun remboursement.</li>
                 </ul>
-                <p className="mb-3"><strong>Annulation par Fanorama Experiences :</strong></p>
-                <p>En cas d'annulation de notre fait (météo dangereuse, force majeure, nombre de participants insuffisant), nous proposerons soit un report à une date ultérieure, soit un remboursement intégral de l'acompte versé. Nous ne saurions être tenus responsables des frais annexes (transport, hôtel, visa, etc.).</p>
+                <p className="mb-3"><strong>Annulation par Gîte Panorama :</strong></p>
+                <p>En cas d'annulation de notre fait (force majeure, indisponibilité), nous proposerons soit un report à une date ultérieure, soit un remboursement intégral de l'acompte versé. Nous ne saurions être tenus responsables des frais annexes (transport, visa, etc.).</p>
               </>
             ) : (
               <>
@@ -154,8 +153,8 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
                   <li>Less than 15 days before departure: deposit is non-refundable.</li>
                   <li>No-show: no refund.</li>
                 </ul>
-                <p className="mb-3"><strong>Cancellation by Fanorama Experiences:</strong></p>
-                <p>If we cancel due to dangerous weather, force majeure, or insufficient participants, we will offer either a rescheduled date or a full refund of any deposit paid. We cannot be held liable for ancillary costs (flights, hotels, visas, etc.).</p>
+                <p className="mb-3"><strong>Cancellation by Gite Panorama:</strong></p>
+                <p>If we cancel due to force majeure or unavailability, we will offer either a rescheduled date or a full refund of any deposit paid. We cannot be held liable for ancillary costs (flights, visas, etc.).</p>
               </>
             )}
           </section>
@@ -167,25 +166,25 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
             </h2>
             {isFr ? (
               <>
-                <p className="mb-3">Les activités de plein air (VTT, ski, randonnée, e-bike) comportent des risques inhérents. En participant, vous reconnaissez :</p>
+                <p className="mb-3">Les activités proposées (randonnées, cours de cuisine) peuvent comporter des risques inhérents. En participant, vous reconnaissez :</p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>Avoir été informé des risques liés à l'activité choisie.</li>
+                  <li>Avoir été informé des conditions et des risques liés à l'activité choisie.</li>
                   <li>Être en bonne condition physique et médicale pour y participer.</li>
-                  <li>Suivre à tout moment les instructions de nos guides.</li>
-                  <li>Que Fanorama Experiences ne peut être tenue responsable des accidents résultant du non-respect des consignes de sécurité ou de comportements imprudents.</li>
+                  <li>Suivre à tout moment les instructions de nos hôtes et guides.</li>
+                  <li>Que Gîte Panorama ne peut être tenu responsable des accidents résultant du non-respect des consignes ou de comportements imprudents.</li>
                 </ul>
-                <p className="mt-3">Nous déclinons toute responsabilité pour les pertes, dommages ou blessures résultant de conditions météorologiques imprévisibles, de force majeure ou d'actes tiers.</p>
+                <p className="mt-3">Nous déclinons toute responsabilité pour les pertes, dommages ou blessures résultant de conditions imprévisibles, de force majeure ou d'actes tiers.</p>
               </>
             ) : (
               <>
-                <p className="mb-3">Outdoor activities (MTB, ski, trekking, e-bike) carry inherent risks. By participating, you acknowledge that:</p>
+                <p className="mb-3">Activities offered (hiking, cooking classes) may carry inherent risks. By participating, you acknowledge that:</p>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>You have been informed of the risks associated with the chosen activity.</li>
+                  <li>You have been informed of the conditions and risks associated with the chosen activity.</li>
                   <li>You are in good physical and medical condition to participate.</li>
-                  <li>You will follow the instructions of our guides at all times.</li>
-                  <li>Fanorama Experiences cannot be held liable for accidents resulting from failure to follow safety instructions or reckless behaviour.</li>
+                  <li>You will follow the instructions of our hosts and guides at all times.</li>
+                  <li>Gite Panorama cannot be held liable for accidents resulting from failure to follow instructions or reckless behaviour.</li>
                 </ul>
-                <p className="mt-3">We disclaim all liability for losses, damages, or injuries resulting from unforeseeable weather, force majeure, or third-party acts.</p>
+                <p className="mt-3">We disclaim all liability for losses, damages, or injuries resulting from unforeseeable conditions, force majeure, or third-party acts.</p>
               </>
             )}
           </section>
@@ -197,8 +196,8 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
             </h2>
             <p>
               {isFr
-                ? "Nous recommandons vivement à tous nos clients de souscrire une assurance voyage couvrant les annulations, les accidents, les rapatriements médicaux et les dommages aux équipements. Fanorama Experiences ne fournit pas d'assurance voyage aux participants."
-                : "We strongly recommend that all clients take out travel insurance covering cancellations, accidents, medical repatriation, and equipment damage. Fanorama Experiences does not provide travel insurance to participants."}
+                ? "Nous recommandons vivement à tous nos clients de souscrire une assurance voyage couvrant les annulations, les accidents et les rapatriements médicaux. Gîte Panorama ne fournit pas d'assurance voyage aux participants."
+                : "We strongly recommend that all clients take out travel insurance covering cancellations, accidents, and medical repatriation. Gite Panorama does not provide travel insurance to guests."}
             </p>
           </section>
 
@@ -209,16 +208,16 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
             </h2>
             {isFr ? (
               <p>
-                Tous les participants doivent adopter un comportement respectueux envers les guides, les autres participants,
-                les communautés locales et l'environnement naturel. Fanorama Experiences se réserve le droit d'exclure sans
-                remboursement toute personne dont le comportement met en danger la sécurité d'autrui ou nuit au bon
-                déroulement de l'activité.
+                Tous les clients doivent adopter un comportement respectueux envers nos hôtes, les autres clients,
+                les communautés locales et l'environnement naturel. Gîte Panorama se réserve le droit de refuser ou
+                d'interrompre un séjour sans remboursement en cas de comportement mettant en danger la sécurité d'autrui
+                ou perturbant gravement le bon fonctionnement du gîte.
               </p>
             ) : (
               <p>
-                All participants must behave respectfully towards guides, fellow participants, local communities, and the
-                natural environment. Fanorama Experiences reserves the right to exclude without refund any person whose
-                behaviour endangers the safety of others or disrupts the activity.
+                All guests must behave respectfully towards our hosts, fellow guests, local communities, and the natural
+                environment. Gite Panorama reserves the right to refuse or end a stay without refund if a guest's behaviour
+                endangers the safety of others or seriously disrupts the running of the guesthouse.
               </p>
             )}
           </section>
@@ -230,8 +229,8 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
             </h2>
             <p>
               {isFr
-                ? "Lors de nos circuits et séjours, des photos ou vidéos peuvent être prises. En participant, vous consentez à ce que ces images puissent être utilisées à des fins promotionnelles sur notre site web et nos réseaux sociaux, sans compensation. Si vous souhaitez vous opposer à cette utilisation, veuillez nous en informer par écrit avant votre départ."
-                : "During our tours and stays, photos or videos may be taken. By participating, you consent to these images being used for promotional purposes on our website and social media, without compensation. If you wish to object to this use, please notify us in writing before your departure."}
+                ? "Durant votre séjour ou les activités, des photos ou vidéos peuvent être prises. En réservant, vous consentez à ce que ces images puissent être utilisées à des fins promotionnelles sur notre site web et nos réseaux sociaux, sans compensation. Si vous souhaitez vous y opposer, veuillez nous en informer par écrit avant votre arrivée."
+                : "During your stay or activities, photos or videos may be taken. By booking, you consent to these images being used for promotional purposes on our website and social media, without compensation. If you wish to object to this use, please notify us in writing before your arrival."}
             </p>
           </section>
 
@@ -242,8 +241,8 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
             </h2>
             <p>
               {isFr
-                ? "L'ensemble du contenu de ce site (textes, images, logos, design) est la propriété exclusive de Fanorama Experiences ou de ses concédants de licence. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est strictement interdite."
-                : "All content on this site (text, images, logos, design) is the exclusive property of Fanorama Experiences or its licensors. Any reproduction, distribution, or use without prior written permission is strictly prohibited."}
+                ? "L'ensemble du contenu de ce site (textes, images, logos, design) est la propriété exclusive de Gite Panorama Imlil ou de ses concédants de licence. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est strictement interdite."
+                : "All content on this site (text, images, logos, design) is the exclusive property of Gite Panorama Imlil or its licensors. Any reproduction, distribution, or use without prior written permission is strictly prohibited."}
             </p>
           </section>
 
@@ -291,7 +290,7 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
               {isFr ? "Pour toute question relative aux présentes conditions :" : "For any questions regarding these terms:"}
             </p>
             <div className="mt-3 text-sm space-y-1">
-              <p><strong>Fanorama Experiences</strong></p>
+              <p><strong>Gite Panorama Imlil</strong></p>
               <p>Douar Imlil, Asni Al Haouz, Imlil 42152, Morocco</p>
               <p><a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a></p>
               <p>+212 653 936 003</p>
