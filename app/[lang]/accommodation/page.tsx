@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { Star, Wifi, Coffee, Mountain, Wind, Clock, Car, Users, Utensils, Sun, Quote } from "lucide-react";
 import { getDictionary, hasLocale } from "../dictionaries";
-import BookingForm from "@/components/tours/BookingForm";
 import RoomSection from "@/components/accommodation/RoomSection";
 import type { Metadata } from "next";
 
@@ -178,9 +177,7 @@ export default async function AccommodationPage({ params }: PageProps<"/[lang]/a
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid lg:grid-cols-3 gap-12">
-          {/* Main */}
-          <div className="lg:col-span-2 space-y-14">
+        <div className="space-y-14">
             <p className="text-white/60 leading-relaxed text-lg">{a.description}</p>
 
             {/* Booking.com score */}
@@ -308,18 +305,6 @@ export default async function AccommodationPage({ params }: PageProps<"/[lang]/a
                 ))}
               </div>
             </div>
-          </div>
-
-          {/* Booking sidebar */}
-          <div className="lg:col-span-1">
-            <div className="sticky top-24" id="booking-form">
-              <BookingForm
-                tourName={isFr ? "Gîte Panorama — Séjour" : "Gite Panorama — Accommodation"}
-                lang={lang}
-                dict={dict}
-              />
-            </div>
-          </div>
         </div>
       </div>
     </div>
