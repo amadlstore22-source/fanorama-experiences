@@ -81,6 +81,7 @@ const amenities = [
 
 export const roomTypes = [
   {
+    id: "single-mountain-view",
     nameEn: "Single Room with Mountain View",
     nameFr: "Chambre Simple Vue Montagne",
     size: "15 m²",
@@ -92,6 +93,7 @@ export const roomTypes = [
     featuresFr: ["Vue montagne", "Salle de bain privée", "Terrasse", "Machine à café", "Sèche-cheveux"],
   },
   {
+    id: "double-room",
     nameEn: "Double Room",
     nameFr: "Chambre Double",
     size: "16 m²",
@@ -103,6 +105,7 @@ export const roomTypes = [
     featuresFr: ["Vue montagne & jardin", "Salle de bain privée", "Terrasse", "Cheminée", "Machine à laver"],
   },
   {
+    id: "deluxe-double-balcony",
     nameEn: "Deluxe Double Room with Balcony",
     nameFr: "Chambre Double Deluxe avec Balcon",
     size: "15 m²",
@@ -115,6 +118,7 @@ export const roomTypes = [
     highlight: true,
   },
   {
+    id: "deluxe-twin-balcony",
     nameEn: "Deluxe Double or Twin Room with Balcony",
     nameFr: "Chambre Double ou Twin Deluxe avec Balcon",
     size: null,
@@ -126,6 +130,7 @@ export const roomTypes = [
     featuresFr: ["Balcon", "Salle de bain privée", "Petit-déjeuner inclus"],
   },
   {
+    id: "double-twin-terrace",
     nameEn: "Double or Twin Room with Terrace",
     nameFr: "Chambre Double ou Twin avec Terrasse",
     size: null,

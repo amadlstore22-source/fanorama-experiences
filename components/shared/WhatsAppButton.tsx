@@ -22,8 +22,8 @@ export default function WhatsAppButton({
   }, []);
 
   const message = tourName
-    ? `Hi! I'd like to book the ${tourName} tour.`
-    : `Hello! I'm interested in booking a tour with Fanorama Experiences.`;
+    ? `Hi! I'd like to book: ${tourName} at Gite Panorama.`
+    : `Hello! I'd like to enquire about a stay at Gite Panorama Imlil.`;
 
   const url = `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
 

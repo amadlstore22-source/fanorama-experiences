@@ -3,6 +3,7 @@ import { hasLocale, getDictionary, locales } from "./dictionaries";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/shared/WhatsAppButton";
+import ConsentBanner from "@/components/shared/ConsentBanner";
 
 export async function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -24,6 +25,7 @@ export default async function LangLayout({
       <main className="flex-1">{children}</main>
       <Footer lang={lang} dict={dict} />
       <WhatsAppButton dict={dict} tourName="" />
+      <ConsentBanner lang={lang} />
     </>
   );
 }

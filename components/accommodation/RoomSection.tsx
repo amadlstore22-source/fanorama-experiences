@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X } from "lucide-react";
 
 type Room = {
+  id: string;
   nameEn: string;
   nameFr: string;
   size: string | null;
@@ -22,12 +23,11 @@ type Room = {
 type Dict = Parameters<typeof BookingForm>[0]["dict"];
 
 export default function RoomSection({ rooms, lang, dict }: { rooms: Room[]; lang: string; dict: Dict }) {
-  const [bookingRoom, setBookingRoom] = useState<string | null>(null);
+  const [booking, setBooking] = useState<{ id: string; name: string } | null>(null);
   const isFr = lang === "fr";
 
-  const handleBook = (roomName: string) => {
-    setBookingRoom(roomName);
-    // Small delay then scroll to the inline booking form
+  const handleBook = (roomId: string, roomName: string) => {
+    setBooking({ id: roomId, name: roomName });
     setTimeout(() => {
       document.getElementById("room-booking-form")?.scrollIntoView({ behavior: "smooth", block: "start" });
     }, 100);
@@ -39,9 +39,8 @@ export default function RoomSection({ rooms, lang, dict }: { rooms: Room[]; lang
         <RoomCard key={room.nameEn} room={room} lang={lang} onBook={handleBook} />
       ))}
 
-      {/* Inline booking form that appears when a room is selected */}
       <AnimatePresence>
-        {bookingRoom && (
+        {booking && (
           <motion.div
             id="room-booking-form"
             initial={{ opacity: 0, height: 0 }}
@@ -56,16 +55,16 @@ export default function RoomSection({ rooms, lang, dict }: { rooms: Room[]; lang
                   <div className="text-saffron text-xs font-semibold tracking-widest uppercase mb-0.5">
                     {isFr ? "Réservation pour" : "Booking for"}
                   </div>
-                  <div className="font-heading text-lg font-semibold text-white">{bookingRoom}</div>
+                  <div className="font-heading text-lg font-semibold text-white">{booking.name}</div>
                 </div>
                 <button
-                  onClick={() => setBookingRoom(null)}
+                  onClick={() => setBooking(null)}
                   className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
                 >
                   <X className="w-4 h-4 text-white" />
                 </button>
               </div>
-              <BookingForm tourName={bookingRoom} lang={lang} dict={dict} />
+              <BookingForm roomId={booking.id} tourName={booking.name} lang={lang} dict={dict} />
             </div>
           </motion.div>
         )}

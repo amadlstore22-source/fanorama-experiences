@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, Bed, Users, Maximize2, Check, Star, MessageCircle, Video } from "lucide-react";
 
 type Room = {
+  id: string;
   nameEn: string;
   nameFr: string;
   size: string | null;
@@ -20,7 +21,7 @@ type Room = {
 type Props = {
   room: Room;
   lang: string;
-  onBook: (roomName: string) => void;
+  onBook: (roomId: string, roomName: string) => void;
 };
 
 const WHATSAPP = "212653936003";
@@ -177,7 +178,7 @@ export default function RoomCard({ room, lang, onBook }: Props) {
 
                 <div className="flex flex-col gap-3">
                   <button
-                    onClick={() => { setOpen(false); onBook(name); }}
+                    onClick={() => { setOpen(false); onBook(room.id, name); }}
                     className="w-full bg-terracotta hover:bg-terracotta-dark text-white rounded-full py-3.5 text-sm font-semibold transition-all duration-200 hover:shadow-lg hover:shadow-terracotta/30"
                   >
                     {isFr ? "Réserver cette chambre" : "Book this room"}
