@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Bed, Users, Maximize2, Check, Star, MessageCircle, Video } from "lucide-react";
+import { X, Bed, Users, Maximize2, Check, Star, MessageCircle } from "lucide-react";
 
 type Room = {
   id: string;
   nameEn: string;
   nameFr: string;
+  photo: string;
   size: string | null;
   beds: string;
   bedsFr: string;
@@ -62,6 +64,18 @@ export default function RoomCard({ room, lang, onBook }: Props) {
             </span>
           </div>
         )}
+
+        {/* Room photo */}
+        <div className="relative h-44 -mx-5 -mt-5 mb-4 overflow-hidden rounded-t-2xl">
+          <Image
+            src={room.photo}
+            alt={room.nameEn}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            sizes="(max-width: 640px) 100vw, 50vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1917]/80 to-transparent" />
+        </div>
 
         <div className="flex flex-col sm:flex-row sm:items-start gap-4">
           <div className="flex-1">
@@ -146,10 +160,15 @@ export default function RoomCard({ room, lang, onBook }: Props) {
                 </div>
               </div>
 
-              {/* Video placeholder */}
-              <div className="mx-7 mt-6 rounded-xl bg-white/5 border border-white/10 h-40 flex flex-col items-center justify-center gap-2 text-white/20 border-dashed">
-                <Video className="w-8 h-8" />
-                <span className="text-xs">{isFr ? "Aperçu vidéo bientôt disponible" : "Video preview coming soon"}</span>
+              {/* Room photo */}
+              <div className="relative mx-7 mt-6 rounded-xl overflow-hidden h-48">
+                <Image
+                  src={room.photo}
+                  alt={name}
+                  fill
+                  className="object-cover"
+                  sizes="480px"
+                />
               </div>
 
               {/* Features */}

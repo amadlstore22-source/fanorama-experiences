@@ -75,6 +75,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
       bioEn: "The patriarch of Gite Panorama. A professional mountain guide since the 1980s, Lahsen built a reputation for guiding mountaineers up Toubkal while welcoming them into his Imlil home.",
       bioFr: "Le patriarche du Gîte Panorama. Guide de montagne professionnel depuis les années 1980, Lahsen s'est forgé une réputation en accompagnant les alpinistes au Toubkal tout en les accueillant dans sa maison d'Imlil.",
       initial: "L",
+      photo: "/images/team lahsen.jpeg",
     },
     {
       name: "Smail Aitidar",
@@ -83,6 +84,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
       bioEn: "Smail carries his father's spirit of hospitality into every guest interaction — warm, attentive, and proud to share the beauty of Imlil with the world.",
       bioFr: "Smail perpétue l'esprit d'hospitalité de son père dans chaque échange avec les clients — chaleureux, attentif et fier de partager la beauté d'Imlil avec le monde.",
       initial: "S",
+      photo: null,
     },
     {
       name: "Mohamed Aitidar",
@@ -91,6 +93,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
       bioEn: "Mohamed ensures every stay at Gite Panorama is seamless and memorable — from the first welcome to the last cup of mint tea before departure.",
       bioFr: "Mohamed veille à ce que chaque séjour au Gîte Panorama soit impeccable et mémorable — du premier accueil à la dernière tasse de thé à la menthe avant le départ.",
       initial: "M",
+      photo: "/images/team mohamed.jpeg",
     },
   ];
 
@@ -188,17 +191,35 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
           </div>
           <div className="grid sm:grid-cols-3 gap-6">
             {hosts.map((h) => (
-              <div key={h.name} className="bg-white/5 border border-white/10 rounded-2xl p-7 text-center hover:border-terracotta/30 hover:-translate-y-1 transition-all duration-300 group">
-                <div className="w-16 h-16 bg-gradient-to-br from-terracotta to-saffron rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                  <span className="font-heading text-2xl font-bold text-white">{h.initial}</span>
+              <div key={h.name} className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-terracotta/30 hover:-translate-y-1 transition-all duration-300 group">
+                {/* Avatar / photo */}
+                {h.photo ? (
+                  <div className="relative h-56 w-full overflow-hidden">
+                    <Image
+                      src={h.photo}
+                      alt={h.name}
+                      fill
+                      className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 640px) 100vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a1917]/80 to-transparent" />
+                  </div>
+                ) : (
+                  <div className="h-56 bg-gradient-to-br from-terracotta/20 to-saffron/10 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-gradient-to-br from-terracotta to-saffron rounded-2xl flex items-center justify-center shadow-lg">
+                      <span className="font-heading text-3xl font-bold text-white">{h.initial}</span>
+                    </div>
+                  </div>
+                )}
+                <div className="p-7 text-center">
+                  <h3 className="font-heading text-xl font-bold text-white mb-0.5">{h.name}</h3>
+                  <p className="text-terracotta text-xs font-semibold mb-4 uppercase tracking-wider">
+                    {isFr ? h.roleFr : h.roleEn}
+                  </p>
+                  <p className="text-sm text-white/50 leading-relaxed">
+                    {isFr ? h.bioFr : h.bioEn}
+                  </p>
                 </div>
-                <h3 className="font-heading text-xl font-bold text-white mb-0.5">{h.name}</h3>
-                <p className="text-terracotta text-xs font-semibold mb-4 uppercase tracking-wider">
-                  {isFr ? h.roleFr : h.roleEn}
-                </p>
-                <p className="text-sm text-white/50 leading-relaxed">
-                  {isFr ? h.bioFr : h.bioEn}
-                </p>
               </div>
             ))}
           </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Mountain, Phone, Mail, MapPin } from "lucide-react";
+import Image from "next/image";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 type Dict = {
   nav: { rooms: string; activities: string; about: string; gallery: string; contact: string };
@@ -34,14 +35,14 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link href={`/${lang}`} className="flex items-center gap-2.5 mb-5 group w-fit">
-              <div className="w-10 h-10 bg-terracotta rounded-xl flex items-center justify-center group-hover:bg-terracotta-dark transition-colors">
-                <Mountain className="w-5 h-5 text-white" />
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="font-heading text-2xl font-bold text-white">Gite Panorama</span>
-                <span className="text-[9px] tracking-[0.2em] uppercase text-white/30">Imlil Â· Morocco</span>
-              </div>
+            <Link href={`/${lang}`} className="flex items-center mb-5 group w-fit">
+              <Image
+                src="/images/logo.png"
+                alt="Gite Panorama Imlil"
+                width={140}
+                height={140}
+                className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              />
             </Link>
             <p className="text-sm leading-relaxed text-white/40 max-w-sm mb-8">
               {dict.footer.tagline}

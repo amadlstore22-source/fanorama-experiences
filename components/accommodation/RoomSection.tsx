@@ -10,6 +10,7 @@ type Room = {
   id: string;
   nameEn: string;
   nameFr: string;
+  photo: string;
   size: string | null;
   beds: string;
   bedsFr: string;

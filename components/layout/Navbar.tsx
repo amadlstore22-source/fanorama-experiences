@@ -47,7 +47,7 @@ export default function Navbar({ lang, dict }: { lang: string; dict: Dict }) {
           {/* Logo */}
           <Link href={`/${lang}`} className="flex items-center group">
             <Image
-              src="/images/logo.jpeg"
+              src="/images/logo.png"
               alt="Gite Panorama Imlil"
               width={120}
               height={120}
@@ -106,7 +106,7 @@ export default function Navbar({ lang, dict }: { lang: string; dict: Dict }) {
               <SheetContent side="right" className="w-72 bg-charcoal border-l border-white/10 p-0">
                 <div className="p-6 border-b border-white/10">
                   <Image
-                    src="/images/logo.jpeg"
+                    src="/images/logo.png"
                     alt="Gite Panorama Imlil"
                     width={120}
                     height={120}

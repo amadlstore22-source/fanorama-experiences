@@ -144,6 +144,65 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-saffron/60 to-transparent" />
       </section>
 
+      {/* ── STORY TEASER ── */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Photo */}
+          <div className="relative rounded-3xl overflow-hidden h-80 md:h-[420px] order-2 md:order-1">
+            <Image
+              src="/images/gite/gite-panorama-exterior.jpg"
+              alt="Gite Panorama family guesthouse in Imlil"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            <div className="absolute bottom-5 left-5 right-5">
+              <div className="flex gap-2">
+                {["Lahsen", "Smail", "Mohamed"].map((name) => (
+                  <div key={name} className="w-9 h-9 rounded-full bg-terracotta/80 border-2 border-white/20 flex items-center justify-center text-white text-xs font-bold">
+                    {name[0]}
+                  </div>
+                ))}
+                <div className="ml-2 text-white/70 text-xs self-center leading-tight">
+                  {isFr ? "Lahsen, Smail & Mohamed\nVotre famille d'hôtes" : "Lahsen, Smail & Mohamed\nYour host family"}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Text */}
+          <div className="order-1 md:order-2">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-px w-6 bg-saffron/60" />
+              <span className="text-saffron text-xs font-semibold tracking-[0.3em] uppercase">
+                {isFr ? "Notre histoire" : "Our story"}
+              </span>
+            </div>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+              {isFr ? "Un héritage né dans l'Atlas" : "A Legacy Born in the Atlas"}
+            </h2>
+            <p className="text-white/60 leading-relaxed mb-4 text-lg">
+              {isFr
+                ? "Notre père Lahsen a grandi dans les montagnes du Haut Atlas et est devenu guide de montagne professionnel dans les années 1980. Depuis lors, il a accueilli des voyageurs du monde entier avec la même chaleur berbère."
+                : "Our father Lahsen grew up in the High Atlas mountains and became a professional mountain guide in the 1980s. Since then, he has welcomed travellers from around the world with the same Berber warmth."}
+            </p>
+            <p className="text-white/40 leading-relaxed mb-8">
+              {isFr
+                ? "Ses fils Smail et Mohamed ont perpétué cet héritage, transformant la maison familiale en ce gîte — un lieu où authenticité et hospitalité se conjuguent au quotidien."
+                : "His sons Smail and Mohamed carried that legacy forward, turning the family home into this gite — a place where authenticity and hospitality are a way of life."}
+            </p>
+            <Link
+              href={`/${lang}/about`}
+              className="inline-flex items-center gap-2 text-sm font-semibold text-terracotta hover:text-terracotta-light transition-colors group"
+            >
+              {isFr ? "Rencontrer la famille" : "Meet the family"}
+              <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ── ROOMS PREVIEW ── */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="flex items-center gap-3 mb-3">
