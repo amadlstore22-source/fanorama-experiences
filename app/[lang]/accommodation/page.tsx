@@ -160,7 +160,8 @@ export default async function AccommodationPage({ params }: PageProps<"/[lang]/a
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#111110] via-black/30 to-black/50" />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#111110] via-black/20 to-transparent" />
 
         <div className="absolute bottom-0 left-0 right-0 px-6 md:px-10 pb-12">
           <div className="flex flex-wrap gap-2 mb-5">

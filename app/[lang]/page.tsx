@@ -83,8 +83,8 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
       <section className="relative h-screen min-h-[680px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
           style={{ backgroundImage: "url('/images/gite/gite-panorama-exterior.jpg')" }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70" />
 
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <div className="flex items-center justify-center gap-3 mb-6">
