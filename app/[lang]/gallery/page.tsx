@@ -1,7 +1,10 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { Camera, MessageCircle } from "lucide-react";
 import { getDictionary, hasLocale } from "../dictionaries";
 import type { Metadata } from "next";
+
+const WHATSAPP = "212653936003";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]/gallery">): Promise<Metadata> {
   const { lang } = await params;
@@ -129,6 +132,31 @@ export default async function GalleryPage({ params }: PageProps<"/[lang]/gallery
           ))}
         </div>
 
+        {/* Feature your photo CTA */}
+        <div className="mt-16 rounded-2xl border border-white/10 bg-white/5 p-8 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+          <div className="w-14 h-14 rounded-2xl bg-[#25D366]/10 border border-[#25D366]/20 flex items-center justify-center shrink-0">
+            <Camera className="w-6 h-6 text-[#25D366]" />
+          </div>
+          <div className="flex-1">
+            <h3 className="font-heading text-xl font-bold text-white mb-1">
+              {isFr ? "Vous avez séjourné chez nous ?" : "Stayed with us?"}
+            </h3>
+            <p className="text-white/50 text-sm">
+              {isFr
+                ? "Envoyez-nous vos plus belles photos via WhatsApp et nous les publierons dans cette galerie."
+                : "Send us your best shots via WhatsApp and we'll feature them right here in this gallery."}
+            </p>
+          </div>
+          <a
+            href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(isFr ? "Bonjour ! Je souhaite partager des photos de mon séjour au Gîte Panorama." : "Hi! I'd like to share some photos from my stay at Gite Panorama.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-semibold text-sm px-6 py-3 rounded-full transition-colors shrink-0"
+          >
+            <MessageCircle className="w-4 h-4" />
+            {isFr ? "Envoyer mes photos" : "Share my photos"}
+          </a>
+        </div>
       </div>
     </div>
   );
