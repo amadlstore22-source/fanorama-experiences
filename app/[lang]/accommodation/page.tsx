@@ -136,7 +136,7 @@ export const roomTypes = [
     id: "double-twin-terrace",
     nameEn: "Double or Twin Room with Terrace",
     nameFr: "Chambre Double ou Twin avec Terrasse",
-    photo: "/images/gallery/room-double-balcony.jpg",
+    photo: "/images/gallery/room-double-balcony.jpeg",
     size: null,
     beds: "2 single beds",
     bedsFr: "2 lits simples",
