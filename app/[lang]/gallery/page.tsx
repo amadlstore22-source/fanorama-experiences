@@ -16,15 +16,48 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/gallery">)
 }
 
 const photos = [
-  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Gite Panorama exterior with Atlas views", altFr: "Extérieur du Gîte Panorama avec vue sur l'Atlas", category: "Exterior" },
-  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Panoramic terrace overlooking Imlil valley", altFr: "Terrasse panoramique sur la vallée d'Imlil", category: "Terrace" },
-  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Deluxe room with balcony and mountain view", altFr: "Chambre deluxe avec balcon et vue montagne", category: "Rooms" },
-  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Traditional Moroccan tagine breakfast", altFr: "Petit-déjeuner tajine marocain traditionnel", category: "Food" },
-  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Mount Toubkal view from Gite Panorama", altFr: "Vue sur le Mont Toubkal depuis le Gîte Panorama", category: "Views" },
-  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Cozy double room with Atlas mountain view", altFr: "Chambre double confortable avec vue sur l'Atlas", category: "Rooms" },
-  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Gite Panorama garden and mountain backdrop", altFr: "Jardin du Gîte Panorama avec montagne en fond", category: "Exterior" },
-  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Moroccan mint tea served on the terrace", altFr: "Thé à la menthe marocain servi en terrasse", category: "Food" },
-  { src: "/images/gite/gite-panorama-exterior.jpg", alt: "Sunset over the Atlas Mountains from the gite", altFr: "Coucher de soleil sur l'Atlas depuis le gîte", category: "Views" },
+  {
+    src: "/images/gallery/terrace-toubkal-snow.jpg",
+    alt: "Snow-capped Atlas peak seen from the Gite Panorama terrace, with walnut trees and bamboo pergola in the foreground",
+    altFr: "Sommet enneigé de l'Atlas vu depuis la terrasse du Gîte Panorama, avec noyers et pergola en bambou au premier plan",
+    category: "Views",
+  },
+  {
+    src: "/images/gallery/imlil-valley-panorama.jpg",
+    alt: "Sweeping panoramic view of the Imlil valley and Atlas mountain ridges from the gite balcony",
+    altFr: "Vue panoramique sur la vallée d'Imlil et les crêtes de l'Atlas depuis le balcon du gîte",
+    category: "Views",
+  },
+  {
+    src: "/images/gallery/imlil-night-stars.jpg",
+    alt: "Imlil village glowing with lights at night beneath a clear starry Atlas sky, seen from above",
+    altFr: "Le village d'Imlil illuminé la nuit sous un ciel étoilé de l'Atlas, vu depuis les hauteurs",
+    category: "Views",
+  },
+  {
+    src: "/images/gallery/aremd-village-toubkal.jpg",
+    alt: "Traditional Berber mud-brick houses of Aremd village stacked on the hillside, with the Toubkal massif rising behind",
+    altFr: "Maisons berbères en pisé du village d'Aremd étagées sur le flanc de montagne, avec le massif du Toubkal en arrière-plan",
+    category: "Surroundings",
+  },
+  {
+    src: "/images/gallery/mizane-valley-gorge.jpg",
+    alt: "The Mizane valley gorge at dusk, with Imlil village perched on the rocky cliff and snow peaks glowing in the background",
+    altFr: "Les gorges de la vallée du Mizane au crépuscule, avec le village d'Imlil sur la falaise et les sommets enneigés en fond",
+    category: "Surroundings",
+  },
+  {
+    src: "/images/gallery/imlil-mosque-valley.jpg",
+    alt: "Imlil's main mosque minaret rising above a lush green valley, with terraced Berber villages covering the hillside beyond",
+    altFr: "Le minaret de la mosquée principale d'Imlil se dressant sur une vallée verdoyante, avec les villages berbères en terrasses au loin",
+    category: "Surroundings",
+  },
+  {
+    src: "/images/gallery/cherry-orchard-imlil.jpg",
+    alt: "Ripe red cherries hanging from a branch in the famous Imlil cherry orchards, harvested each June",
+    altFr: "Cerises rouges mûres suspendues à une branche dans les célèbres cerisiers d'Imlil, récoltées chaque mois de juin",
+    category: "Nature",
+  },
 ];
 
 const categoryColors: Record<string, string> = {
@@ -33,6 +66,8 @@ const categoryColors: Record<string, string> = {
   Rooms: "bg-saffron/80",
   Food: "bg-orange-600",
   Views: "bg-blue-600",
+  Surroundings: "bg-purple-700",
+  Nature: "bg-atlas-green",
 };
 
 export default async function GalleryPage({ params }: PageProps<"/[lang]/gallery">) {
@@ -94,13 +129,6 @@ export default async function GalleryPage({ params }: PageProps<"/[lang]/gallery
           ))}
         </div>
 
-        <div className="mt-12 text-center">
-          <p className="text-white/20 text-sm">
-            {isFr
-              ? "📷 De vraies photos seront ajoutées prochainement"
-              : "📷 Real photos will be added soon"}
-          </p>
-        </div>
       </div>
     </div>
   );
