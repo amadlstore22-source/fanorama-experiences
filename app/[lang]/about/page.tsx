@@ -11,8 +11,8 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/about">): 
       ? "Notre Histoire | Gîte Panorama Imlil"
       : "Our Story | Gite Panorama Imlil",
     description: lang === "fr"
-      ? "La famille Aitidar vous accueille au Gîte Panorama à Imlil depuis 2010 avec une hospitalité berbère authentique."
-      : "The Aitidar family welcomes you to Gite Panorama in Imlil since 2010 with authentic Berber hospitality.",
+      ? "La famille Aitidar vous accueille au Gîte Panorama à Imlil avec une hospitalité berbère authentique depuis plus de quatre décennies."
+      : "The Aitidar family has welcomed guests to Gite Panorama in Imlil with authentic Berber hospitality for over four decades.",
   };
 }
 
@@ -69,33 +69,33 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
 
   const hosts = [
     {
-      name: "Ismael Aitidar",
-      roleEn: "Host & Founder",
-      roleFr: "Hôte & Fondateur",
-      bioEn: "The heart and soul of Gite Panorama. Ismael has been welcoming guests for over 15 years and knows how to make everyone feel at home in Imlil.",
-      bioFr: "Le cœur et l'âme du Gîte Panorama. Ismael accueille des clients depuis plus de 15 ans et sait comment mettre tout le monde à l'aise à Imlil.",
-      initial: "I",
-    },
-    {
-      name: "Youssuf Aitidar",
-      roleEn: "Host & Manager",
-      roleFr: "Hôte & Responsable",
-      bioEn: "Kind, attentive, and incredibly welcoming. Youssuf manages the day-to-day running of the gite and ensures every guest has everything they need.",
-      bioFr: "Attentionné, généreux et incroyablement accueillant. Youssuf gère le quotidien du gîte et s'assure que chaque client a tout ce dont il a besoin.",
-      initial: "Y",
-    },
-    {
-      name: "Lason Aitidar",
-      roleEn: "Host & Local Guide",
-      roleFr: "Hôte & Guide Local",
-      bioEn: "A warm and experienced host who helps guests explore the area around Imlil. Lason's deep knowledge of the local area is unmatched.",
-      bioFr: "Un hôte chaleureux et expérimenté qui aide les clients à explorer la région d'Imlil. La connaissance approfondie de Lason de la région locale est inégalée.",
+      name: "Lahsen Aitidar",
+      roleEn: "Founder & Mountain Guide",
+      roleFr: "Fondateur & Guide de Montagne",
+      bioEn: "The patriarch of Gite Panorama. A professional mountain guide since the 1980s, Lahsen built a reputation for guiding mountaineers up Toubkal while welcoming them into his Imlil home.",
+      bioFr: "Le patriarche du Gîte Panorama. Guide de montagne professionnel depuis les années 1980, Lahsen s'est forgé une réputation en accompagnant les alpinistes au Toubkal tout en les accueillant dans sa maison d'Imlil.",
       initial: "L",
+    },
+    {
+      name: "Smail Aitidar",
+      roleEn: "Host & Co-manager",
+      roleFr: "Hôte & Co-gérant",
+      bioEn: "Smail carries his father's spirit of hospitality into every guest interaction — warm, attentive, and proud to share the beauty of Imlil with the world.",
+      bioFr: "Smail perpétue l'esprit d'hospitalité de son père dans chaque échange avec les clients — chaleureux, attentif et fier de partager la beauté d'Imlil avec le monde.",
+      initial: "S",
+    },
+    {
+      name: "Mohamed Aitidar",
+      roleEn: "Host & Co-manager",
+      roleFr: "Hôte & Co-gérant",
+      bioEn: "Mohamed ensures every stay at Gite Panorama is seamless and memorable — from the first welcome to the last cup of mint tea before departure.",
+      bioFr: "Mohamed veille à ce que chaque séjour au Gîte Panorama soit impeccable et mémorable — du premier accueil à la dernière tasse de thé à la menthe avant le départ.",
+      initial: "M",
     },
   ];
 
   const stats = [
-    { value: "2010", labelEn: "Founded in Imlil", labelFr: "Fondé à Imlil" },
+    { value: "40+", labelEn: "Years of Hospitality", labelFr: "Ans d'hospitalité" },
     { value: "9.1", labelEn: "Booking.com Score", labelFr: "Score Booking.com" },
     { value: "4.9★", labelEn: "Google Rating", labelFr: "Note Google" },
     { value: "30+", labelEn: "Countries", labelFr: "Pays" },
@@ -143,20 +143,22 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
               </span>
             </div>
             <h2 className="font-heading text-4xl font-bold text-white mb-6">
-              {isFr ? "Nés à Imlil" : "Born in Imlil"}
+              {isFr ? "Un héritage né dans l'Atlas" : "A Legacy Born in the Atlas"}
             </h2>
             <div className="space-y-4 text-white/55 leading-relaxed">
               {isFr ? (
                 <>
-                  <p>Tout a commencé dans le village d'Imlil, au pied du mont Toubkal — le plus haut sommet d'Afrique du Nord à 4 167m. La famille Aitidar vit et travaille ici depuis des générations.</p>
-                  <p>En 2010, nous avons ouvert les portes du Gîte Panorama pour partager notre coin de paradis avec les voyageurs du monde entier. Ce n'est pas un hôtel — c'est notre maison, et vous êtes nos invités.</p>
-                  <p>Chaque repas est préparé avec des ingrédients locaux. Chaque chambre a été aménagée avec soin. Et chaque client repart avec le sourire — et souvent avec la recette du tagine.</p>
+                  <p>Tout a commencé avec notre père, Lahsen — guide de montagne professionnel depuis les années 1980, accompagnant les alpinistes les plus ambitieux au sommet du Toubkal, le plus haut sommet d'Afrique du Nord à 4 167m, et à travers les paysages époustouflants de l'Atlas.</p>
+                  <p>Au fil des années, Lahsen n'a pas seulement guidé les gens vers les sommets — il les a accueillis chez lui à Imlil, partageant repas, récits et un art de vivre que peu de voyageurs ont la chance de connaître.</p>
+                  <p>Cet esprit d'hospitalité a été transmis à ses fils, Smail et Mohamed — non pas comme un métier, mais comme une responsabilité. Ils ont ouvert les portes du Gîte Panorama pour perpétuer l'héritage de leur père : un endroit où chaque client est traité comme un membre de la famille, chaque repas est préparé avec amour, et les montagnes sont toujours à portée de main.</p>
+                  <p>Ce n'est pas un hôtel. C'est une maison qui accueille le monde depuis plus de quatre décennies.</p>
                 </>
               ) : (
                 <>
-                  <p>It all started in the village of Imlil, at the foot of Mount Toubkal — North Africa's highest peak at 4,167m. The Aitidar family has lived and worked here for generations.</p>
-                  <p>In 2010, we opened the doors of Gite Panorama to share our corner of paradise with travelers from around the world. This isn't a hotel — it's our home, and you are our guests.</p>
-                  <p>Every meal is prepared with local ingredients. Every room has been set up with care. And every guest leaves with a smile — and often with the tagine recipe.</p>
+                  <p>It began with our father, Lahsen — a professional mountain guide since the 1980s, leading ambitious mountaineers up Toubkal, North Africa's highest peak at 4,167m, and through the breathtaking landscapes of the Atlas.</p>
+                  <p>Over the years, Lahsen didn't just guide people to the summit — he welcomed them into his home in Imlil, sharing meals, stories, and a way of life that few travellers ever get to experience.</p>
+                  <p>That spirit of hospitality was passed down to his sons, Smail and Mohamed — not as a business, but as a responsibility. They opened the doors of Gite Panorama to carry their father's legacy forward: a place where every guest is treated like family, every meal is made with love, and the mountains are always within reach.</p>
+                  <p>This isn't a hotel. It's a home that has welcomed the world for over four decades.</p>
                 </>
               )}
             </div>
