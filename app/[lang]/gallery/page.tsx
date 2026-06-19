@@ -19,12 +19,112 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/gallery">)
 }
 
 const photos = [
+  // Exterior & terrace
   {
     src: "/images/gallery/terrace-toubkal-snow.jpg",
-    alt: "Snow-capped Atlas peak seen from the Gite Panorama terrace, with walnut trees and bamboo pergola in the foreground",
-    altFr: "Sommet enneigé de l'Atlas vu depuis la terrasse du Gîte Panorama, avec noyers et pergola en bambou au premier plan",
-    category: "Views",
+    alt: "Snow-capped Toubkal massif seen from the Gite Panorama terrace in winter",
+    altFr: "Massif enneigé du Toubkal vu depuis la terrasse du Gîte Panorama en hiver",
+    category: "Terrace",
   },
+  {
+    src: "/images/gite/terrace-panorama-wide.jpg",
+    alt: "Gite Panorama's rooftop terrace with mosaic tables and sweeping Atlas mountain views",
+    altFr: "Terrasse panoramique du Gîte avec tables en mosaïque et vue sur l'Atlas",
+    category: "Terrace",
+  },
+  {
+    src: "/images/gite/gite-exterior-summer.jpg",
+    alt: "Gite Panorama exterior in summer — wooden balconies surrounded by lush green valley trees",
+    altFr: "Extérieur du Gîte Panorama en été — balcons en bois entourés d'arbres verdoyants",
+    category: "Exterior",
+  },
+  {
+    src: "/images/gallery/balcony-private.jpg",
+    alt: "Private mosaic balcony table for two with Atlas valley and Berber village views",
+    altFr: "Table de balcon privé en mosaïque pour deux avec vue sur la vallée et villages berbères",
+    category: "Terrace",
+  },
+  // Rooms
+  {
+    src: "/images/gallery/room-double-purple.jpg",
+    alt: "Deluxe double room with purple accent wall, bamboo ceiling, and Atlas mountain balcony",
+    altFr: "Chambre double deluxe avec mur violet, plafond en bambou et balcon sur l'Atlas",
+    category: "Rooms",
+  },
+  {
+    src: "/images/gallery/room-double-purple-open.jpg",
+    alt: "Double room with purple decor and Berber hand-woven rugs, viewed from the private terrace",
+    altFr: "Chambre double décor violet et tapis berbères tissés à la main, vue depuis la terrasse",
+    category: "Rooms",
+  },
+  {
+    src: "/images/gallery/room-deluxe-twin.jpg",
+    alt: "Deluxe twin room with bamboo ceiling, hand-carved wooden beds, and balcony access",
+    altFr: "Chambre twin deluxe avec plafond en bambou, lits en bois sculptés et accès balcon",
+    category: "Rooms",
+  },
+  {
+    src: "/images/gallery/room-berber-twin.jpg",
+    alt: "Berber-style twin room with vibrant orange striped blankets, Berber rug and carved ceiling lamp",
+    altFr: "Chambre twin berbère avec couvertures rayées orange vif, tapis berbère et plafonnier sculpté",
+    category: "Rooms",
+  },
+  {
+    src: "/images/gallery/room-berber-wide.jpg",
+    alt: "Berber twin room — warm colours, traditional hand-painted wall art and bamboo ceiling",
+    altFr: "Chambre twin berbère — couleurs chaudes, art mural traditionnel peint à la main, plafond bambou",
+    category: "Rooms",
+  },
+  {
+    src: "/images/gallery/room-twin-blue.jpg",
+    alt: "Twin room with blue bedding, Berber rug and ornate Moroccan ceiling medallion",
+    altFr: "Chambre twin avec linge bleu, tapis berbère et médaillon de plafond marocain orné",
+    category: "Rooms",
+  },
+  {
+    src: "/images/gallery/room-twin-yellow.jpg",
+    alt: "Twin room with yellow Moroccan quilts, wooden headboard and carved plaster ceiling detail",
+    altFr: "Chambre twin avec couettes marocaines jaunes, tête de lit en bois et plafond sculpté",
+    category: "Rooms",
+  },
+  {
+    src: "/images/gallery/room-double-balcony.jpg",
+    alt: "Double room with sliding glass door opening onto a private balcony with Atlas mountain view",
+    altFr: "Chambre double avec porte vitrée coulissante ouvrant sur un balcon privé vue Atlas",
+    category: "Rooms",
+  },
+  {
+    src: "/images/gallery/room-single-view.jpg",
+    alt: "Single room with panoramic mountain window, bamboo ceiling and Berber rug",
+    altFr: "Chambre simple avec fenêtre panoramique montagne, plafond bambou et tapis berbère",
+    category: "Rooms",
+  },
+  {
+    src: "/images/gallery/room-view-door.jpg",
+    alt: "Room door open to a private balcony overlooking the green Imlil valley",
+    altFr: "Porte de chambre ouverte sur un balcon privé donnant sur la vallée verdoyante d'Imlil",
+    category: "Rooms",
+  },
+  // Interior
+  {
+    src: "/images/gallery/salon-bamboo.jpg",
+    alt: "Common salon with traditional Moroccan banquette seating, bamboo ceiling and walnut table",
+    altFr: "Salon commun avec banquettes marocaines traditionnelles, plafond bambou et table en noyer",
+    category: "Interior",
+  },
+  {
+    src: "/images/gallery/corridor-bamboo.jpg",
+    alt: "Gite corridor with hand-crafted bamboo ceiling and traditional carved wooden doors",
+    altFr: "Couloir du gîte avec plafond en bambou artisanal et portes en bois sculpté traditionnel",
+    category: "Interior",
+  },
+  {
+    src: "/images/gallery/bathroom-zellige.jpg",
+    alt: "Private bathroom with traditional Moroccan zellige tilework in terracotta and green",
+    altFr: "Salle de bain privée avec zellige marocain traditionnel en terre cuite et vert",
+    category: "Rooms",
+  },
+  // Surroundings & nature
   {
     src: "/images/gallery/imlil-valley-panorama.jpg",
     alt: "Sweeping panoramic view of the Imlil valley and Atlas mountain ridges from the gite balcony",
@@ -33,32 +133,32 @@ const photos = [
   },
   {
     src: "/images/gallery/imlil-night-stars.jpg",
-    alt: "Imlil village glowing with lights at night beneath a clear starry Atlas sky, seen from above",
-    altFr: "Le village d'Imlil illuminé la nuit sous un ciel étoilé de l'Atlas, vu depuis les hauteurs",
+    alt: "Imlil village glowing with lights at night beneath a clear starry Atlas sky",
+    altFr: "Le village d'Imlil illuminé la nuit sous un ciel étoilé de l'Atlas",
     category: "Views",
   },
   {
     src: "/images/gallery/aremd-village-toubkal.jpg",
-    alt: "Traditional Berber mud-brick houses of Aremd village stacked on the hillside, with the Toubkal massif rising behind",
-    altFr: "Maisons berbères en pisé du village d'Aremd étagées sur le flanc de montagne, avec le massif du Toubkal en arrière-plan",
+    alt: "Traditional Berber village of Aremd with the Toubkal massif rising behind",
+    altFr: "Village berbère d'Aremd avec le massif du Toubkal en arrière-plan",
     category: "Surroundings",
   },
   {
     src: "/images/gallery/mizane-valley-gorge.jpg",
-    alt: "The Mizane valley gorge at dusk, with Imlil village perched on the rocky cliff and snow peaks glowing in the background",
-    altFr: "Les gorges de la vallée du Mizane au crépuscule, avec le village d'Imlil sur la falaise et les sommets enneigés en fond",
+    alt: "The Mizane valley gorge with Imlil village perched on the rocky cliff",
+    altFr: "Les gorges de la vallée du Mizane avec le village d'Imlil sur la falaise rocheuse",
     category: "Surroundings",
   },
   {
     src: "/images/gallery/imlil-mosque-valley.jpg",
-    alt: "Imlil's main mosque minaret rising above a lush green valley, with terraced Berber villages covering the hillside beyond",
-    altFr: "Le minaret de la mosquée principale d'Imlil se dressant sur une vallée verdoyante, avec les villages berbères en terrasses au loin",
+    alt: "Imlil mosque minaret rising above a lush green valley with terraced Berber villages",
+    altFr: "Minaret de la mosquée d'Imlil dominant une vallée verdoyante avec villages en terrasses",
     category: "Surroundings",
   },
   {
     src: "/images/gallery/cherry-orchard-imlil.jpg",
-    alt: "Ripe red cherries hanging from a branch in the famous Imlil cherry orchards, harvested each June",
-    altFr: "Cerises rouges mûres suspendues à une branche dans les célèbres cerisiers d'Imlil, récoltées chaque mois de juin",
+    alt: "Ripe red cherries in the famous Imlil cherry orchards, harvested each June",
+    altFr: "Cerises rouges mûres dans les célèbres cerisiers d'Imlil, récoltées chaque juin",
     category: "Nature",
   },
 ];
@@ -67,6 +167,7 @@ const categoryColors: Record<string, string> = {
   Exterior: "bg-terracotta",
   Terrace: "bg-atlas-green",
   Rooms: "bg-saffron/80",
+  Interior: "bg-amber-700",
   Food: "bg-orange-600",
   Views: "bg-blue-600",
   Surroundings: "bg-purple-700",
