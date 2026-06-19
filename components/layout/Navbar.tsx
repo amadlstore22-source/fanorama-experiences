@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, Mountain, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -44,18 +45,15 @@ export default function Navbar({ lang, dict }: { lang: string; dict: Dict }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href={`/${lang}`} className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 bg-terracotta rounded-xl flex items-center justify-center group-hover:bg-terracotta-dark transition-colors shadow-sm group-hover:rotate-3 transition-all duration-300">
-              <Mountain className="w-5 h-5 text-white" />
-            </div>
-            <div className="flex flex-col leading-none">
-              <span className={`font-heading text-xl font-bold tracking-wide ${dark ? "text-white" : "text-charcoal"}`}>
-                Gite Panorama
-              </span>
-              <span className={`text-[9px] tracking-[0.2em] uppercase font-medium ${dark ? "text-white/50" : "text-muted-warm"}`}>
-                Imlil · Morocco
-              </span>
-            </div>
+          <Link href={`/${lang}`} className="flex items-center group">
+            <Image
+              src="/images/logo.jpeg"
+              alt="Gite Panorama Imlil"
+              width={120}
+              height={120}
+              className="h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -107,15 +105,13 @@ export default function Navbar({ lang, dict }: { lang: string; dict: Dict }) {
               </SheetTrigger>
               <SheetContent side="right" className="w-72 bg-charcoal border-l border-white/10 p-0">
                 <div className="p-6 border-b border-white/10">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-9 h-9 bg-terracotta rounded-xl flex items-center justify-center">
-                      <Mountain className="w-5 h-5 text-white" />
-                    </div>
-                    <div className="flex flex-col leading-none">
-                      <span className="font-heading text-xl font-bold text-white">Gite Panorama</span>
-                      <span className="text-[9px] tracking-[0.2em] uppercase text-white/40">Imlil · Morocco</span>
-                    </div>
-                  </div>
+                  <Image
+                    src="/images/logo.jpeg"
+                    alt="Gite Panorama Imlil"
+                    width={120}
+                    height={120}
+                    className="h-12 w-auto object-contain"
+                  />
                 </div>
                 <nav className="flex flex-col p-4 gap-1">
                   {links.map((link) => (
