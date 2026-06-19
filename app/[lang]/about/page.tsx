@@ -167,7 +167,7 @@ export default async function AboutPage({ params }: PageProps<"/[lang]/about">) 
             </div>
           </div>
           <div className="relative h-80 md:h-[420px] rounded-3xl overflow-hidden border border-white/10">
-            <Image src="/images/about-team.jpg" alt={isFr ? "La famille Aitidar à Imlil" : "The Aitidar family in Imlil"} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+            <Image src="/images/us.jpeg" alt={isFr ? "La famille Aitidar à Imlil" : "The Aitidar family in Imlil"} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
         </div>
