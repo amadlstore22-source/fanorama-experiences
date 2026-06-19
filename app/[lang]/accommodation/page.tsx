@@ -83,7 +83,7 @@ export const roomTypes = [
     id: "single-mountain-view",
     nameEn: "Single Room with Mountain View",
     nameFr: "Chambre Simple Vue Montagne",
-    photo: "/images/gallery/room-single-view.jpg",
+    photo: "/images/gallery/room-twin-blue.jpg",
     size: "15 m²",
     beds: "1 single bed",
     bedsFr: "1 lit simple",
