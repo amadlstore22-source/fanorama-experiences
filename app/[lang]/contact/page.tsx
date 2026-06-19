@@ -26,7 +26,7 @@ export default async function ContactPage({ params }: PageProps<"/[lang]/contact
   const contactItems = [
     { icon: Phone, label: c.phone, value: "+212 653 936 003", href: "tel:+212653936003" },
     { icon: MessageCircle, label: c.whatsapp, value: "+212 653 936 003", href: "https://wa.me/212653936003" },
-    { icon: Mail, label: c.email, value: "1wahed.nab2012@gmail.com", href: "mailto:1wahed.nab2012@gmail.com" },
+    { icon: Mail, label: c.email, value: "infoaitidar@gmail.com", href: "mailto:infoaitidar@gmail.com" },
     { icon: MapPin, label: c.address, value: "Douar Imlil Asni, Imlil 42152, Morocco", href: undefined },
   ];
 

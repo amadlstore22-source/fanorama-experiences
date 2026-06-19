@@ -40,7 +40,7 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
               </div>
               <div className="flex flex-col leading-none">
                 <span className="font-heading text-2xl font-bold text-white">Gite Panorama</span>
-                <span className="text-[9px] tracking-[0.2em] uppercase text-white/30">Imlil · Morocco</span>
+                <span className="text-[9px] tracking-[0.2em] uppercase text-white/30">Imlil Â· Morocco</span>
               </div>
             </Link>
             <p className="text-sm leading-relaxed text-white/40 max-w-sm mb-8">
@@ -54,12 +54,12 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
                 </div>
                 +212 653 936 003
               </a>
-              <a href="mailto:1wahed.nab2012@gmail.com"
+              <a href="mailto:infoaitidar@gmail.com"
                 className="flex items-center gap-3 text-white/40 hover:text-terracotta transition-colors group">
                 <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-terracotta/10 transition-colors">
                   <Mail className="w-3.5 h-3.5" />
                 </div>
-                1wahed.nab2012@gmail.com
+                infoaitidar@gmail.com
               </a>
               <div className="flex items-start gap-3 text-white/40">
                 <div className="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center shrink-0 mt-0.5">
@@ -105,7 +105,7 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
                 <a href="https://www.instagram.com/imlil_panorama_lodge/"
                   target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-2 text-sm text-white/40 hover:text-terracotta transition-colors">
-                  📷 Instagram
+                  ðŸ“· Instagram
                 </a>
               </li>
             </ul>
@@ -114,7 +114,7 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
 
         {/* Bottom bar */}
         <div className="border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/25">
-          <span>© {year} Gite Panorama Imlil. {dict.footer.rights}</span>
+          <span>Â© {year} Gite Panorama Imlil. {dict.footer.rights}</span>
           <div className="flex gap-6">
             <Link href={`/${lang}/privacy`} className="hover:text-white/50 transition-colors">
               {dict.footer.privacy}
@@ -128,3 +128,4 @@ export default function Footer({ lang, dict }: { lang: string; dict: Dict }) {
     </footer>
   );
 }
+

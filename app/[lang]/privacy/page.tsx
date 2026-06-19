@@ -39,7 +39,7 @@ export default async function PrivacyPage({ params }: PageProps<"/[lang]/privacy
                 Gîte Panorama est une maison d'hôtes familiale basée à Douar Imlil, Asni Al Haouz, Maroc (code postal 42152),
                 proposant des hébergements et des activités d'une journée à Imlil. Pour toute question
                 relative à la présente politique, vous pouvez nous contacter à :{" "}
-                <a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a> ou
+                <a href="mailto:infoaitidar@gmail.com" className="text-terracotta underline">infoaitidar@gmail.com</a> ou
                 au +212 653 936 003.
               </p>
             ) : (
@@ -47,7 +47,7 @@ export default async function PrivacyPage({ params }: PageProps<"/[lang]/privacy
                 Gite Panorama is a family-run guesthouse based at Douar Imlil, Asni Al Haouz, Morocco (postal code 42152),
                 offering accommodation and day activities in Imlil. For any questions regarding this
                 policy, contact us at:{" "}
-                <a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a> or
+                <a href="mailto:infoaitidar@gmail.com" className="text-terracotta underline">infoaitidar@gmail.com</a> or
                 +212 653 936 003.
               </p>
             )}
@@ -194,7 +194,7 @@ export default async function PrivacyPage({ params }: PageProps<"/[lang]/privacy
                   <li><strong>Droit à la portabilité</strong> — recevoir vos données dans un format structuré.</li>
                   <li><strong>Droit de retirer votre consentement</strong> à tout moment, sans que cela affecte la licéité du traitement antérieur.</li>
                 </ul>
-                <p className="mt-3">Pour exercer ces droits, contactez-nous à <a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a>. Nous répondrons dans un délai de 30 jours.</p>
+                <p className="mt-3">Pour exercer ces droits, contactez-nous à <a href="mailto:infoaitidar@gmail.com" className="text-terracotta underline">infoaitidar@gmail.com</a>. Nous répondrons dans un délai de 30 jours.</p>
               </>
             ) : (
               <>
@@ -207,7 +207,7 @@ export default async function PrivacyPage({ params }: PageProps<"/[lang]/privacy
                   <li><strong>Right to portability</strong> — receive your data in a structured format.</li>
                   <li><strong>Right to withdraw consent</strong> at any time, without affecting the lawfulness of prior processing.</li>
                 </ul>
-                <p className="mt-3">To exercise these rights, contact us at <a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a>. We will respond within 30 days.</p>
+                <p className="mt-3">To exercise these rights, contact us at <a href="mailto:infoaitidar@gmail.com" className="text-terracotta underline">infoaitidar@gmail.com</a>. We will respond within 30 days.</p>
               </>
             )}
           </section>
@@ -293,7 +293,7 @@ export default async function PrivacyPage({ params }: PageProps<"/[lang]/privacy
             <div className="mt-3 text-sm space-y-1">
               <p><strong>Gite Panorama Imlil</strong></p>
               <p>Douar Imlil, Asni Al Haouz, Imlil 42152, Morocco</p>
-              <p><a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a></p>
+              <p><a href="mailto:infoaitidar@gmail.com" className="text-terracotta underline">infoaitidar@gmail.com</a></p>
               <p>+212 653 936 003</p>
             </div>
           </section>

@@ -3,12 +3,12 @@ export function LocalBusinessJsonLd() {
     "@context": "https://schema.org",
     "@type": ["LodgingBusiness", "BedAndBreakfast"],
     name: "Gite Panorama Imlil",
-    alternateName: "Gîte Panorama",
+    alternateName: "GÃ®te Panorama",
     description:
       "A family-run guesthouse in Imlil at the foot of Toubkal National Park. Panoramic Atlas views, home-cooked Moroccan meals, and authentic Berber hospitality.",
     url: "https://fanorama-experiences.vercel.app",
     telephone: "+212653936003",
-    email: "1wahed.nab2012@gmail.com",
+    email: "infoaitidar@gmail.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Douar Imlil Asni",
@@ -70,3 +70,4 @@ export function LocalBusinessJsonLd() {
     />
   );
 }
+

@@ -38,7 +38,7 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
               <p>
                 Le présent site est exploité par <strong>Gîte Panorama</strong>, maison d'hôtes familiale basée à
                 Douar Imlil, Asni Al Haouz, Imlil 42152, Maroc. Contact :{" "}
-                <a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a>{" "}
+                <a href="mailto:infoaitidar@gmail.com" className="text-terracotta underline">infoaitidar@gmail.com</a>{" "}
                 — +212 653 936 003. En accédant à ce site et en effectuant une réservation, vous acceptez les présentes
                 conditions dans leur intégralité.
               </p>
@@ -46,7 +46,7 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
               <p>
                 This website is operated by <strong>Gite Panorama</strong>, a family-run guesthouse based at
                 Douar Imlil, Asni Al Haouz, Imlil 42152, Morocco. Contact:{" "}
-                <a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a>{" "}
+                <a href="mailto:infoaitidar@gmail.com" className="text-terracotta underline">infoaitidar@gmail.com</a>{" "}
                 — +212 653 936 003. By accessing this site and making a booking, you agree to these terms in full.
               </p>
             )}
@@ -292,7 +292,7 @@ export default async function TermsPage({ params }: PageProps<"/[lang]/terms">) 
             <div className="mt-3 text-sm space-y-1">
               <p><strong>Gite Panorama Imlil</strong></p>
               <p>Douar Imlil, Asni Al Haouz, Imlil 42152, Morocco</p>
-              <p><a href="mailto:1wahed.nab2012@gmail.com" className="text-terracotta underline">1wahed.nab2012@gmail.com</a></p>
+              <p><a href="mailto:infoaitidar@gmail.com" className="text-terracotta underline">infoaitidar@gmail.com</a></p>
               <p>+212 653 936 003</p>
             </div>
           </section>
